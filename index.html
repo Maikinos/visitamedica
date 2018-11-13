@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <title>Quimédica - Programación Visitas Médicas</title>
+
+    <link href="assets/css/fullcalendar.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" >
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
+
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-theme="sap_bluecrystal" data-sap-ui-libs="sap.ui.commons, sap.ui.ux3, sap.ui.table"></script>
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+</head>
+
+<body class="horizontal-nav skin-megna-dark fixed-layout">
+
+    <button id="botonm1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Modal1</button>
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Quimédica - Registro de Visitas</p>
+        </div>
+    </div>
+
+    <header id="topnav">
+        
+        <div class="topbar-main">
+
+            <div class="container-fluid">
+
+                <div class="logo">
+                    <a href="index.html" class="logo"><img src="assets/images/logo-sm-light.png" alt="" class="logo-small"> <img src="assets/images/logo-light.png" alt="" class="logo-large"></a>
+                </div>
+
+                <div class="menu-extras topbar-custom">
+
+                    <ul class="navbar-right d-flex list-inline float-right mb-0">
+
+                <li class="dropdown notification-list d-none d-sm-block">
+                    <form role="search" class="app-search">
+                        <div class="form-group mb-0">
+                            <input type="text" class="form-control" placeholder="Buscar..">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+
+                <li class="dropdown notification-list"><a style="font-size: 28px;color: white;text-shadow: none;" class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><i class="fas fa-comment-alt"></i> <span class="badge badge-pill badge-info noti-icon-badge">3</span></a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+                        <h6 class="dropdown-item-text">Notificaciones (3)</h6>
+                        <div class="slimscroll notification-item-list">
+
+                            <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                <div class="notify-icon bg-success"><i class="fas fa-circle"></i></div>
+                                <p class="notify-details">Visita Cercana<span class="text-muted">Revisa el calendario tienes una visita cercana.</span></p>
+                            </a>
+
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-warning"><i class="fas fa-circle"></i></div>
+                                <p class="notify-details">Contraseña cambiada<span class="text-muted">Se cambió la contraseña correctamente.</span></p>
+                            </a>
+
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon bg-info"><i class="fas fa-circle"></i></div>
+                                <p class="notify-details">Cambios encontrados<span class="text-muted">Se realizaron cambios en el sistema a nivel interno.</span></p>
+                            </a>
+
+                        </div>
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">Ver todo <i class="fi-arrow-right"></i></a>
+                    </div>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <div class="dropdown notification-list">
+                        <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="assets/images/user-4.jpg" alt="user" class="rounded-circle"></a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                            <a class="dropdown-item" href="#"><i class="fas fa-circle"></i> Mi perfil</a> 
+                            <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="fas fa-circle"></i> Agenda</a> 
+                            <a class="dropdown-item d-block" href="#"><i class="fas fa-circle"></i> Configuraciones</a> 
+                                <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-circle"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="menu-item list-inline-item">
+                    <a class="navbar-toggle nav-link">
+                        <div class="lines"><span></span><span></span><span></span></div>
+                    </a>
+                </li>
+
+                    </ul>
+
+                </div>
+                
+                <div class="clearfix"></div>
+
+            </div>
+
+        </div>
+
+        <div class="navbar-custom">
+            <div class="container-fluid">
+
+                <div id="navigation">
+                    <ul class="navigation-menu">
+                        
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-circle"></i>Médicos</a>
+                            <ul class="submenu">
+                                <li><a href="#">Target</a></li>
+                                <li><a href="#">Agregar / Modificar</a></li>
+                                <li><a href="#">Historial</a></li>
+                                <li><a href="#">Alta / Baja</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-circle"></i>Farmacias</a>
+                            <ul class="submenu">
+                                <li><a href="#">Target</a></li>
+                                <li><a href="#">Alta / Baja</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-circle"></i>Reportes</a>
+                            <ul class="submenu">
+                                <li><a href="#">Medicos</a></li>
+                                <li><a href="#">Farmacias</a></li>
+                                <li><a href="#">Actividades</a></li>
+                                <li><a href="#">Semanal</a></li>
+                                <li><a href="#">Cumpleaños</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="#"><i class="fas fa-circle"></i>Gestión de control</a>
+                            <ul class="submenu">
+                                <li><a href="#">Visitas</a></li>
+                                <li><a href="#">Geolocalización de Médicos</a></li>
+                                <li><a href="#">Descargar Información General</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    
+    <div id="main-wrapper">
+        
+        <aside class="left-sidebar">
+            <div class="nav-text-box align-items-center d-md-none">
+
+                <a class="nav-lock waves-effect waves-dark ml-auto hidden-md-down" href="javascript:void(0)"><i class="fas fa-circle"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-close"></i></a>
+            
+            </div>
+
+            <div class="scroll-sidebar">
+
+            </div>
+
+        </aside>
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor"></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-lg-3 panel-filtros-c">
+                                            <!--<a href="javascript:void(0)" data-toggle="modal" data-target="#add-new-event" class="btn m-t-10 btn-info btn-block waves-effect waves-light col-md-10" style="margin-left: 20px;">
+                                                Registrar nueva visita
+                                            </a>-->
+                                            <div id="filtros-busqueda-movil"><i class="fab fa-searchengin"></i></div>
+                                        <div class="card-body">
+                                            <h4 class="card-title m-t-10">Instituciones</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    
+                                                    <div id="calendar-events" class="">
+                                                        <input style="width: 100%;border: 1px solid #afafaf;padding: 8px;color: #565656;background-image: url('assets/images/search.png');background-repeat: no-repeat;background-position: right;background-size: 25px; margin-bottom: 27px;" type="text" name="Buscar Institución" placeholder="Buscar Institución..">
+                                                        <div class="calendar-events" style="width:245px;" data-class="bg-success"><img src="assets/images/m-insitucion.png" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">POLIC. EL PALMAR LO TILOS</div>
+                                                        <div class="calendar-events" style="width:245px;" data-class="bg-success"><img src="assets/images/m-insitucion.png" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">POLIC. SAN JOSE OBRERO</div>
+                                                        <div class="calendar-events" style="width:245px;" data-class="bg-success"><img src="assets/images/m-insitucion.png" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">HOSP. SOLIDARIDAD SJM</div>
+                                                        <div class="calendar-events" style="width:245px;" data-class="bg-success"><img src="assets/images/m-insitucion.png" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">CLÍ. VIRGEN DEL ROSARIO</div>
+                                                    </div>
+
+                                                        <hr style="margin-top: 35px;background: #cecdcd;height: 2px;margin-bottom: 35px;">
+
+                                                        <div class="medicos-busqueda">
+                                                                <h4 class="card-title m-t-10">Médicos</h4>
+                                                            <input style="width: 100%;border: 1px solid #afafaf;padding: 8px;color: #565656;background-image: url('assets/images/search.png');background-repeat: no-repeat;background-position: right;background-size: 25px;" type="text" name="Buscar Médico" placeholder="Buscar Médico..">
+
+                                                            <br><br>
+                                                                <div id="calendar-events" class="" style="height: 338px;margin-top: 5px;">
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">NORA ALVARADO <span style="margin-left: 10px;color: black; font-weight: 600;">MG</span></div>
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">DEMETRIO ANCHANTE <span style="margin-left: 10px;color: black; font-weight: 600;">MG</span></div>
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">JEAN CRIADO <span style="margin-left: 10px;color: black; font-weight: 600;">TRA</span></div>
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">VICTOR MATEO <span style="margin-left: 10px;color: black; font-weight: 600;">MG</span></div>
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">RODOLFO SUAREZ <span style="margin-left: 10px;color: black; font-weight: 600;">MG</span></div>
+
+                                                                    <div class="calendar-events" style="width:245px; font-size: 13px;" data-class="bg-success"><img src="assets/images/m-general.jpg" style="max-width: 32px;border-radius: 100%;margin-right: 10px;vertical-align: middle;">ELSA ZEGARRA <span style="margin-left: 10px;color: black; font-weight: 600;">NER</span></div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-9">
+                                        
+                                        <div class="card-body b-l calender-sidebar">
+
+                                                <div class="indicadores-pordia">
+                                                    <h5>Indicadores del Ciclo: </h5>
+                                                        <span class="indicador-r" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas Reportadas." style="cursor: pointer;">0</span>
+                                                        <span class="indicador-sr" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas Sin Reportar." style="cursor: pointer;">0</span>
+                                                        <!--<span class="indicador-a" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas No Programadas." style="cursor: pointer;">10</span>-->
+                                                    </div>
+
+                                                    <div class="indicadores-pordia segundo">
+                                                        <h5>Contactos Visitados: </h5>
+                                                            <span class="" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Contactos Visitados en todo el Ciclo." style="cursor: pointer;">22</span>
+                                                            
+                                                        </div>
+                                            <div class="clearfix bajado"></div>
+                                            <div class="filtros-bg">
+                                        <ul class="unstyled centered">
+                                            <li>
+                                                <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1" checked>
+                                                <label for="styled-checkbox-1">Reportadas</label>
+                                            </li>
+
+                                            <li>
+                                                <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
+                                                <label for="styled-checkbox-2">Sin Reportar</label>
+                                            </li>
+
+                                            <li style="display:none;">
+                                                <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3" checked>
+                                                <label for="styled-checkbox-3">Fuera de Fecha</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                            <div id="calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--MODAL-->
+                
+                <div style="padding-top: 38%;" class="modal fade" id="exampleModalconfirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <h5 style="font-size: 15px;margin-bottom: 22px;">Selecciona la Fecha y Hora del día al cual deseas clonar:</h5>
+                            
+                            <!--DATEPICKER-->
+                            <div class="input-group date calendario-dinam">
+                                <input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+                              </div>
+
+    <button class="btn btn-info">Clonar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <!--MODAL-->
+            </div>
+            
+        </div>
+    </div>
+
+<!--MODALES GENERALES-->
+<div class="modal fade" id="exampleModalMAPS" tabindex="5000" role="dialog" aria-labelledby="exampleModalMAPS" aria-hidden="true" style="z-index: 100000; background-color: #00000063;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+            <button type="button" class="close" style="text-align: right;padding-right: 20px;font-size: 30px;" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          <div class="modal-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7801560103308!2d-77.02474918582476!3d-12.0586417914594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c93522398839%3A0x669a5e83f444e46d!2sAv.+Miguel+Grau+800%2C+Cercado+de+Lima+15033!5e0!3m2!1ses-419!2spe!4v1541520353463" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>      
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--MODAL 2 - MEDICOS-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            
+        <div class="modal-content">
+                <div class="modal-header">
+                    <div class="fechas-calendario-cambia">
+                            <h5 class="modal-title" id="exampleModalLabel">Jueves 8, Noviembre del 2018</h5>
+                            <div class="clearfix"></div>
+                            <h5 class="modal-title" id="exampleModalLabelCAMBIO">Miércoles 21, Noviembre del 2018</h5>
+                    </div>
+                    
+                    <button class="btn btn-info" data-toggle="modal" data-target="#exampleModalconfirma" id="clonar-planificacion"><i class="fas fa-copy"></i>  Clonar Planificación</button>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="tabs" style="width: 100%;">
+                        <div class="tab-button-outer">
+                          <ul id="tab-button">
+                            <li><a href="#tab01">Planificación</a></li>
+                            <li><a href="#tab02">Registros</a></li>
+                          </ul>
+                        </div>
+                      
+                        <div id="tab01" class="tab-contents">
+                                
+                                        <div class="modal-body">
+                                            <label for="">Seleccionar Médicos o Institución</label>
+                                            <div class="clearfix"></div>
+                                            <div style="text-align: center;">
+                                            
+                                            
+                                            <div style="text-align: left;position: relative;display: inline-block;width: 65%;">
+                                            <select class="selectpicker" data-live-search="true" multiple data-width="100%" data-size="5" data-actions-box="false"">
+                                                    
+                                                    <optgroup data-icon="fas fa-hospital" label="POLICLINICO SAN JOSE OBRERO" data-max-options="10">
+                                                        <option data-icon="fas fa-user-md">NORA ALVARADO PORTALINO</option>
+                                                        <option data-icon="fas fa-user-md">JEAN CARLOS CRIADO HUERTO</option>
+                                                    </optgroup>
+                                                    <optgroup data-icon="fas fa-hospital" label="POLICLINICO EL PALMAR LO TILOS">
+                                                        <option data-icon="fas fa-user-md">DEMETRIO CARLOS ANCHANTE ANYARIN</option>
+                                                    </optgroup>
+                                                    <optgroup data-icon="fas fa-hospital" label="HOSPITAL SOLIDARIDAD SJM">
+                                                        <option data-icon="fas fa-user-md">VICTOR HUGO MATEO MONTALVO</option>
+                                                        <option data-icon="fas fa-user-md">RODOLFO SUAREZ GUTIERREZ</option>
+                                                    </optgroup>
+                                                    <optgroup data-icon="fas fa-hospital" label="CLÍNICA VIRGEN DEL ROSARIO">
+                                                        <option data-icon="fas fa-user-md">ELSA ZEGARRA OSORIO</option>
+                                                    </optgroup>
+                                                    <optgroup data-icon="fas fa-hospital" label="HOSPITAL GERIATRICO MILITAR">
+                                                        <option data-icon="fas fa-user-md">MIGUEL ANGEL PACCO HUARAHUARA</option>
+                                                    </optgroup>
+
+                                                </select>
+                                                <button class="btn btn-default filtros-avanzados-medicos" data-toggle="modal" data-target="#filtrosAvanzados"><i class="fas fa-filter"></i></button>
+                                            </div>
+                                            <button class="btn boton-paseplanificar"><i class="fas fa-clipboard-check"></i></button>
+                                        </div>
+                                            <br>
+                                            <br>
+                                            
+                                            <label for="">Médicos Seleccionados</label>
+                                            <div class="table-responsive">
+                                            <table class="table planificacion-statmd">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">Médico</th>
+                                                        <th scope="col">Hora / Turno</th>
+                                                        <th scope="col">Dirección</th>
+                                                        <th scope="col">Última Visita</th>
+                                                        <th scope="col"></th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                            <th scope="row" class="relativo-c1">NORA ALVARADO <span class="infomed" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"><i class="fas fa-info-circle"></i></span></th>
+                                                        <td>
+                                                            <img src="assets/images/img-clock.png" alt="" class="imagen-ref">
+                                                        </td>
+                                                        <td>
+                                                                <button type="button" class="btn acciones-medicos vermapa"><i class="fas fa-map-marked-alt"></i></button>
+                                                        </td>
+                                                        <td>
+                                                                <button type="button" class="btn acciones-medicos" data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-clipboard-list"></i></button>
+                                                        </td>
+                                                        <td>
+                                                              <!--<button type="button" class="btn acciones-medicos eliminamd adm"><i class="fas fa-arrow-circle-down" style="color: #ffc107;"></i></button>-->
+                                                              <button type="button" class="btn acciones-medicos eliminamd adm"><i style="color: red;" class="far fa-times-circle"></i></button>
+                                                                
+                                                        </td>
+                                                      </tr>
+
+                                                      <tr>
+                                                            <th scope="row" class="relativo-c2">RODOLFO SUAREZ <span class="infomed"><i class="fas fa-info-circle"></i></span></th>
+                                                            <td>
+                                                                <img src="assets/images/img-clock.png" alt="" class="imagen-ref">
+                                                            </td>
+                                                            <td>
+                                                                    <button type="button" class="btn acciones-medicos vermapa"><i class="fas fa-map-marked-alt"></i></button>
+                                                                    
+                                                            </td>
+                                                            <td>
+                                                                    <button type="button" class="btn acciones-medicos" data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-clipboard-list"></i></button>
+                                                            </td>
+                                                            <td>
+                                                                  <!--  <button type="button" class="btn acciones-medicos eliminamd adm"><i class="fas fa-arrow-circle-down" style="color: #ffc107;"></i></button>    -->
+                                                                <button type="button" class="btn acciones-medicos eliminamd adm"><i style="color: red;" class="far fa-times-circle"></i></button>
+                                                                 
+                                                            </td>
+                                                          </tr>
+
+                                                          
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                                  <button type="button" class="btn btn-success rplani">Registrar Planificación</button>
+                                                  <button data-toggle="modal" data-target="#m-pa" type="button" class="btn btn-success aplani">Actualizar Planificación</button>
+                                        </div>
+                        </div>
+                        <div id="tab02" class="tab-contents">
+
+                        <div class="container ret">
+                        <h5 class="h5tope reportados"><i class="fas fa-circle"></i> Reportados</h5>
+                        <div id="accordion">
+                        <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Médico 02
+                        </button>
+                        <div class="contiene-acciones-med">
+                        
+                        
+                        <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Médico 05
+                        </button>
+                        <div class="contiene-acciones-med">
+                        
+                        
+                        <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Médico 07
+                        </button>
+                        <div class="contiene-acciones-med">
+                        
+                        
+                        <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="container ret">
+                            <h5 class="h5tope sinreportar"><i class="fas fa-circle"></i> Sin Reportar <strong style="font-weight: 600;">(Sólo Planificados)</strong></h5>
+                        <div id="accordion">
+                        <div class="card">
+                        <div class="card-header" id="heading10">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
+                        Médico 10
+                        </button>
+                        <div class="contiene-acciones-med">
+                        <button type="button" class="btn acciones-medicos confirmasobrereporte"><i class="fas fa-check"></i></button>
+                        <button type="button" class="btn acciones-medicos"><i class="fas fa-puzzle-piece"></i></button>
+                        <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </h5>
+                        </div>
+                        <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
+                        <div class="card-body">
+                            
+                            <!--DATEPICKER-->
+                            <div class="input-group date calendario-dinam">
+                                <input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+                              </div>
+
+                            <select class="form-control col-5" id="Turno" style="text-align: center;"> 
+                                <option>8:00 a.m.</option> 
+                                <option>6:00 p.m.</option>
+                              </select>
+                     <br><br>
+                      
+                      <hr>
+
+                     <h5>Muestras a entregar:</h5>
+<!--Tabla-->
+<div class="table-responsive">
+<table class="table tablastock">
+    <thead>
+        <tr>
+            <th scope="col">M. Médica</th>
+            <th scope="col">Disponible</th>
+            <th scope="col">Restante</th>
+            <th scope="col" style="min-width: 100px;">Entrega</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">OPTIVE 3ML (MM)</th>
+        <td>10</td>
+        <td>9</td>
+        <td>
+            <div class="input-group top-group">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                        <span class="fas fa-minus"></span>
+                    </button>
+                </span>
+                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                        <span class="fas fa-plus"></span>
+                    </button>
+                </span>
+            </div>
+        </td>
+        </tr>
+
+        <tr>
+            <th scope="row">COMBIGAN 2,5ML (MM)</th>
+            <td>15</td>
+            <td>14</td>
+            <td>
+                <div class="input-group top-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                            <span class="fas fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                            <span class="fas fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">OPTIVE 3ML (MM)</th>
+            <td>5</td>
+            <td>4</td>
+            <td>
+                <div class="input-group top-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                            <span class="fas fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                            <span class="fas fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<hr>
+
+<h5 style="margin-top: 30px;font-size: 16px;">Malla Promocional:</h5>
+<!--MALLA PROMOCIONAL-->
+<div class="form-check col-5" style="display: inline-block;">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Lapicero
+    </label>
+    </div>
+    <div class="form-check col-5" style="display: inline-block;">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Libreta
+    </label>
+</div>
+<div class="form-check col-5" style="display: inline-block;">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">Revista
+        </label>
+    </div>
+    <div class="form-check col-5" style="display: inline-block;">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Agenda
+            </label>
+        </div>
+
+        <hr>
+        <div class="form-group">
+                <label for="comment">Comentario Adicional:</label>
+                <textarea class="form-control" rows="3" id="comment"></textarea>
+            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header" id="heading11">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapseThree">
+                        Médico 14
+                        </button>
+                        <div class="contiene-acciones-med">
+                        <button type="button" class="btn acciones-medicos"><i class="fas fa-check"></i></button>
+                        <button type="button" class="btn acciones-medicos"><i class="fas fa-puzzle-piece"></i></button>
+                        <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </h5>
+                        </div>
+                        <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <!--<div class="container ret">
+                            <h5 class="h5tope adicionales"><i class="fas fa-circle"></i> Visitas Adicionales</h5>
+                        <div id="accordion">
+                        <div class="card" style="margin-bottom: 25px;">
+                            <div class="card-header" id="heading12">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseThree">
+                                Médico 27
+                                </button>
+                                <div class="contiene-acciones-med">
+                                <button type="button" class="btn acciones-medicos"><i class="fas fa-check"></i></button>
+                                <button type="button" class="btn acciones-medicos"><i class="fas fa-puzzle-piece"></i></button>
+                                <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
+                                </div>
+                            </h5>
+                            </div>
+                            <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
+                            <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+
+             <!-- COMENTARIOS ADICIONALES -->
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>-->
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+
+    </div>
+        </div>
+        </div>
+    </div>
+<!--MODAL 2 - MEDICOS-->
+
+<!--MODAL 1 - INSTITUCIONES-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            <div class="modal-body contiene-visita-u">
+                <div class="visita-u">
+                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
+                <br>
+                <h5>Observaciones de la última fecha:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
+                </div>
+                <hr>  
+                <div class="visita-u">
+                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
+                <br>
+                <h5>Observaciones de la última fecha:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
+                </div>
+                <hr>  
+                <div class="visita-u">
+                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
+                <br>
+                <h5>Observaciones de la última fecha:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
+                </div>      
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--MODAL 1 - INSTITUCIONES-->
+
+    <div id="alerta-indicadores-ciclo" class="animated tada delay-3s infinite fast" data-toggle="popover" title="Alerta" data-content="Tienes 22 Visitas sin Reportar!" >
+        <img src="assets/images/icono-alerta.png" alt="">
+    </div>
+    
+    <!-- Modal HTML -->
+        <div style="background-color: #08080887;" id="m-pa" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="icon-box">
+                            <i class="fas fa-check animated bounceIn slow"></i>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 class="animated bounceIn delay-1s fast">Actualizado!</h4>	
+                        <p class="animated bounceIn delay-1s fast">La planificación fue actualizada correctamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+<!--MODAL DE PRUEBAS-->
+  <!-- Modal -->
+  <div class="modal fade" id="filtrosAvanzados" tabindex="-1" role="dialog" aria-labelledby="filtrosAvanzadosTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 20px; margin-bottom: -6px;">Búsqueda Avanzada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body sapUiBody">
+            <div id="sample1"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Aceptar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src='assets/js/jquery.min.js'></script>
+
+    <script src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/js/sidebarmenu.js"></script>
+
+    <script src="assets/js/sticky-kit.min.js"></script>
+    <script src="assets/js/jquery.sparkline.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src='assets/js/fullcalendar.min.js'></script>
+    <script src="assets/js/cal-init.js"></script>
+    
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <!--
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/app.js"></script>
+    -->
+    <script src='assets/js/bootstrap-select.min.js'></script>
+
+
+    <!--scripts de modales-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    
+    <script type="text/javascript">
+
+        $(function () {
+            $('.acciones-medicos').popover({
+            container: 'body'
+            })
+        })
+
+        $('.relativo-c1 .infomed').popover({
+        placement : 'top',
+        html : true,
+        title : 'Información de Médico',
+        content : '<h5 style="font-size: 13px;">Especialidad:</h5> <p>OPE | Oftalmología Pediatra <br> POC | Patología Ocular</p><hr><h5 style="font-size: 13px;">Número:</h5><p>(+51) 987 001 002</p><hr> <h5 style="font-size: 13px;">Contactos:</h5><p>2</p>'
+        });
+
+        $('.relativo-c2 .infomed').popover({
+        placement : 'top',
+        html : true,
+        title : 'Información de Médico',
+        content : '<h5 style="font-size: 13px;">Especialidad:</h5> <p>GLA | Glaucoma</p><hr><h5 style="font-size: 13px;">Número:</h5><p>(+51) 987 555 555</p><hr><h5 style="font-size: 13px;">Contactos:</h5><p>1</p>'
+        });
+
+        $('.vermapa').popover({
+        placement : 'top',
+        html : true,
+        content : '<h5>Institución 1</h5><p>Av.Grau 800, La Victoria <br><span style="display: inline-block;width: 100%; text-align: right;"><button style="color: red;font-size: 13px; margin-bottom: -15px;" type="button" class="btn acciones-medicos-c" data-toggle="modal" data-target="#exampleModalMAPS">Ver mapa <i class="fas fa-map-marker-alt"></i></button></span></p>'
+        });
+
+        $('.confirmasobrereporte').popover({
+        placement : 'top',
+        html : true,
+        content : '<h5>¿Reportar?</h5> <button class="btn btn-success" style="width: 50px;">SI</button> <button class="btn btn-danger" style="width: 50px;">NO</button>'
+        });
+        
+
+    </script>
+
+    <script src="assets/js/seleccion-medicos.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+
+</body>
+
+</html>

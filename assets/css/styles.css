@@ -1,0 +1,632 @@
+.modal-header{
+    border: 0px;
+}
+
+button.dropdown-toggle::after{
+    font-size: 32px;
+    vertical-align: 0px;
+}
+
+button.btn.dropdown-toggle.btn-light{
+    height: 70px;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+}
+
+button.bs-placeholder:hover{
+    background-color: #f9f9f9;
+}
+
+/*TABS*/
+
+.tabs {
+    margin: 0 auto;
+    padding: 0;
+}
+
+  #tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #tab-button li {
+    display: table-cell;
+    width: 20%;
+  }
+
+  #tab-button li a {
+    display: block;
+    padding: .5em;
+    background: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #tab-button li:not(:first-child) a {
+    border-left: none;
+  }
+
+  #tab-button li a:hover,
+  #tab-button .is-active a {
+    border-bottom-color: transparent;
+    background: #fff;
+  }
+
+  .tab-contents {
+    padding: .5em 2em 1em;
+    border: 1px solid #ddd;
+  }
+  
+  
+  /*
+  .tab-button-outer {
+    display: none;
+  }
+  */
+  .tab-contents {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .tab-button-outer {
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    .tab-select-outer {
+      display: none;
+    }
+
+    .tab-contents {
+      position: relative;
+      top: -1px;
+      margin-top: 0;
+    }
+
+  }
+  /*ACORDEON*/
+  .card-header {
+    background-color: white;
+    padding: 0;
+}
+
+.card {
+    border-radius: 0;
+    margin-bottom: 2px;
+}
+
+.h5tope{
+    font-size: 13px;
+    color: grey;
+    font-weight: 300;
+    margin-top: 18px;
+}
+
+.reportados i{
+    color: #4CAF4E;
+}
+
+.sinreportar i{
+    color: #F44336;
+}
+
+.adicionales i{
+    color: #FFC107;
+}
+
+h5.mb-0 button {
+    font-size: 14px;
+}
+
+.acciones-medicos{
+    width: 25px;
+    text-align: center;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+}
+
+.contiene-acciones-med{
+    float: right;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.card-header h5.mb-0 button.btn-link {
+    width: 65%;
+    text-align: left;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    overflow: hidden;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.modal-header h5 {
+    font-size: 14px;
+}
+
+/**//**/
+.datepickerdemoBasicUsage {
+    /** Demo styles for mdCalendar. */ }
+    .datepickerdemoBasicUsage md-content {
+      padding-bottom: 200px; }
+  
+
+    /*DATE PICKER*/
+
+    .gj-datepicker{
+        width: 50%;
+        float: left;
+    }
+
+    .tab-contents {
+        padding: .5em;
+    }
+
+
+    /**/
+
+    .planificacion-statmd{
+        text-align: center;
+    font-size: 14px;
+    }
+
+    .planificacion-statmd td{
+        vertical-align: middle !important;
+    }
+
+    .planificacion-statmd tr th{
+        vertical-align: middle !important;
+    }
+
+    .planificacion-statmd td:last-child{
+        padding: 0;
+        text-align: center;
+        vertical-align: middle !important;
+    }
+
+    .tablastock{
+        text-align: center;
+        font-size: 13px;
+    }
+
+
+    #exampleModal1{
+    background-color: #00000063;
+    }
+
+    .boton-paseplanificar{
+        margin-left: 25px;
+        background-color: #28a745;
+        color: white;
+        font-size: 17px;
+    }
+
+    /*POPOVER DE MEDIKCOS*/
+
+    .relativo-c1{
+     position: relative;   
+    }
+
+    .relativo-c2{
+        position: relative;   
+       }
+
+    .infomed{
+        position: absolute;
+        top: 5px;
+        color: #7c00ff;
+        cursor: pointer;
+        right: 0;
+    }
+
+    .adm{
+        width: 15px;
+        height: 19px;
+        padding: 0;
+        margin-right: 5px;
+        background-color: white;
+        float: left;
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+
+    /*indicadores*/
+    .indicadores-pordia {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        float: left;
+        width: 210px;
+        margin-top: -2px;
+        margin-left: 0;
+        padding: 4px;
+        border: 1px solid #d8d7d7;
+        border-radius: 7px;
+    }
+
+    .indicadores-pordia h5 {
+        margin-bottom: 2px;
+        font-size: 12px;
+    }
+
+    .indicadores-pordia span {
+        width: 22px;
+        height: 21px;
+        border-radius: 100%;
+        color: white;
+        /* padding: 0px 5px; */
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .indicador-r{
+        background-color: #28a745;
+    }
+
+    .indicador-sr{
+        background-color: red;
+    }
+
+    .indicador-a{
+        background-color: #ffc107;
+    }
+
+    /*icono flotante inferior derecho*/
+
+    #alerta-indicadores-ciclo {
+        position: fixed;
+        bottom: 22px;
+        right: 18px;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #alerta-indicadores-ciclo:hover{
+        transform: scale(1.1)
+    }
+
+    #alerta-indicadores-ciclo img{
+        width: 100%;
+    }
+
+    #clonar-planificacion{
+        float: right;
+        margin-left: 12%;
+        font-size: 13px;
+    }
+
+    .fecha-u-aviso{
+        font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+
+    /**/
+    #exampleModalconfirma{
+        z-index: 2000;
+        background-color: #0000009e;
+        padding-top: 10% !important;
+    padding-right: 16px !important;
+    }
+
+
+    .alert-inst {
+        width: 28px;
+        height: 29px;
+        background-color: #dc3545;
+        color: white;
+        padding: 3px 10px 4px;
+        border-radius: 100%;
+        cursor: pointer;
+        float: right;
+    }
+    
+
+    /**/
+
+    @media (max-width: 992px){
+        #main-wrapper {
+            margin-top: 0;
+        }
+
+        .panel-filtros-c {
+            height: 230px;
+            position: fixed;
+            top: 100px;
+            right: -208px;
+            z-index: 99999;
+            background-color: white;
+            /* border: 1px solid; */
+            width: 205px;
+            transition: all ease 250ms;
+            -webkit-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+        }
+
+        div.calendar-events.ui-draggable {
+            display: none;
+        }
+
+        .panel-filtros-c hr{
+            display: none;
+        }
+
+        .panel-filtros-c .card-title {
+            font-size: 14px;
+        }
+
+        #calendar-events{
+            max-width: 135px;
+        }
+
+        #calendar-events input{
+            font-size: 12px;
+        }
+
+        .medicos-busqueda{
+            max-width: 135px;
+        }
+
+        .medicos-busqueda input{
+            font-size: 12px;
+        }
+
+        #filtros-busqueda-movil{
+            display: block !important;
+            position: absolute;
+            left: -47px;
+            top: 0;
+            padding: 5px 10px;
+            font-size: 27px;
+            -webkit-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
+            box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            background-color: #dc3545;
+            color: white;
+            text-shadow: none;
+        }
+
+        .bajado{
+            display: block !important;
+        }
+
+        .unstyled.centered{
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        
+        .tablastock input[name="quant[1]"]{
+            padding: 0px;
+            width: 25px;
+            text-align: center;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        th[scope="col"]:first-child {
+            min-width: 170px;
+        }
+
+        th[scope="col"]:nth-child(3) {
+            min-width: 100px;
+        }
+    }
+
+
+    #filtros-busqueda-movil {
+        display: none;
+    }
+
+
+    .movimiento-traslativo{
+        right: 0;
+    }
+
+    .bajado{
+        display: none;
+    }
+
+    body{
+        background-color: #27343E;
+    }
+
+    /*.popover-header{
+        background-color: #dc3545;
+        color: white;
+    }*/
+
+    .fc-day-grid-event.bg-info{
+        background-color: #4CAF4E !important;
+    }
+
+    .fc-day-grid-event.bg-success{
+        background-color: #F44336 !important;
+    }
+
+    .fc-day-grid-event.bg-success:hover{
+        background-color: #117a8b !important;
+    }
+
+    .fc-day-grid-event.bg-info:hover{
+        background-color: #117a8b !important;
+    }
+
+    .indicadores-pordia.segundo span{
+        background-color: #007bff;
+        cursor: pointer;
+    }
+
+    .indicadores-pordia.segundo {
+        max-width: 164px;
+        margin-left: 18px;
+    }
+
+
+
+    @media(max-width: 450px){
+        .indicadores-pordia.segundo {
+            max-width: 164px;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+
+    .fc th.fc-widget-header{
+        background-color: #dae9f7;
+    }
+
+    #calendar .fc-state-active, #calendar .fc-state-down {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: #fff;
+    }
+
+    
+
+    .tablastock .input-group-btn{
+        width: 22px;
+        height: 22px;
+    }
+
+    .tablastock .input-group-btn button{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+
+
+    .contiene-visita-u{
+        max-height: 220px;
+    overflow: auto;
+    }
+
+    .contiene-visita-u h5{
+        font-size: 14px;
+    }
+
+    .contiene-visita-u p{
+        font-size: 14px;
+    }
+
+    .filtros-avanzados-medicos {
+        position: absolute;
+        z-index: 1000;
+        /* left: 56%; */
+        /* margin-top: 37px; */
+        padding: 2px 6px;
+        color: #565656;
+        font-size: 13px;
+        top: 36px;
+        right: 10px;
+    }
+
+    .sapUiBodyBackground, .sapUiBody {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .sapUiTableHdr{
+        display: none;
+    }
+
+    .tablastock input[name="quant[1]"]{
+        padding: 0px;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .sapUiUx3FFLstHeadTxt {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 !important;
+        padding: 13px;
+        background-color: #cbcdf7;
+    }
+
+
+    .calendario-dinam {
+        min-width: 200px;
+        height: 42px;
+        display: inline-flex;
+        margin-bottom: 10px;
+        width: 100%;
+        margin: auto;
+        margin-right: 30px;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .calendario-dinam input {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        min-width: 110px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .calendario-dinam span {
+        border: 0;
+        padding: 6px 12px;
+        color: #666666;
+        background-color: #dddddd;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    #Turno{
+        display: inline-flex;
+        vertical-align: middle;
+        text-align: center;
+        margin: auto;
+        float: left;
+        min-width: 170px;
+        margin-bottom: 25px;
+        margin-top: 3px;
+    }
+
+    #datetimepicker1 * {
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+    hr{
+        border-top: 2px dashed #bfbfbf;
+    }
+
+    #accordion .card {
+        margin-bottom: 7px;
+    }
+
+    #accordion .collapse.show {
+        border: 2px solid #007bff;
+    }

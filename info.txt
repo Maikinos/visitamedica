@@ -1,0 +1,110 @@
+ 
+                <!--Tabla-->
+<table class="table tablastock">
+        <thead>
+            <tr>
+            <th scope="col">M. Médica</th>
+            <th scope="col">Disponible</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">A entregar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">OPTIVE 3ML (MM)</th>
+            <td>10</td>
+            <td>
+                <div class="input-group top-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                            <span class="fas fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                            <span class="fas fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </td>
+            <td>9</td>
+            </tr>
+
+            <tr>
+                <th scope="row">COMBIGAN 2,5ML (MM)</th>
+                <td>15</td>
+                <td>
+                    <div class="input-group top-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                                <span class="fas fa-minus"></span>
+                            </button>
+                        </span>
+                        <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                <span class="fas fa-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+                <td>14</td>
+            </tr>
+
+            <tr>
+                <th scope="row">OPTIVE 3ML (MM)</th>
+                <td>5</td>
+                <td>
+                    <div class="input-group top-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                                <span class="fas fa-minus"></span>
+                            </button>
+                        </span>
+                        <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                <span class="fas fa-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h5 style="margin-top: 30px;font-size: 16px;">Malla Promocional:</h5>
+<!--MALLA PROMOCIONAL-->
+<div class="form-check col-5" style="display: inline-block;">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Lapicero
+    </label>
+    </div>
+    <div class="form-check col-5" style="display: inline-block;">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Libreta
+    </label>
+</div>
+<div class="form-check col-5" style="display: inline-block;">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">Revista
+        </label>
+    </div>
+    <div class="form-check col-5" style="display: inline-block;">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Agenda
+            </label>
+        </div>
+
+
+	NORA ALVARADO PORTALINO
+	DEMETRIO CARLOS ANCHANTE ANYARIN
+	JEAN CARLOS CRIADO HUERTO
+	VICTOR HUGO MATEO MONTALVO
+	RODOLFO SUAREZ GUTIERREZ
+	ELSA ZEGARRA OSORIO
+
+	MIGUEL ANGEL PACCO HUARAHUARA
+
