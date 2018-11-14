@@ -7,7 +7,7 @@ $('.btn-number').click(function(e){
     var currentVal = parseInt(input.val());
     if (!isNaN(currentVal)) {
         if(type == 'minus') {
-            
+
             if(currentVal > input.attr('min')) {
                 input.val(currentVal - 1).change();
             } 
@@ -57,48 +57,54 @@ $(".btn-number[data-type='bin']").click(function (e) {
   $('.input-number').val('0');
   });
 
-/*FUNCIONALIDAD DE TAB*/
 
-  $(function() {
+    /*FUNCIONALIDAD DE TAB*/
+    $(function() {
     var $tabButtonItem = $('#tab-button li'),
         $tabSelect = $('#tab-select'),
         $tabContents = $('.tab-contents'),
         activeClass = 'is-active';
-  
+
     $tabButtonItem.first().addClass(activeClass);
     $tabContents.not(':first').hide();
-  
+
     $tabButtonItem.find('a').on('click', function(e) {
-      var target = $(this).attr('href');
-  
-      $tabButtonItem.removeClass(activeClass);
-      $(this).parent().addClass(activeClass);
-      $tabSelect.val(target);
-      $tabContents.hide();
-      $(target).show();
-      e.preventDefault();
+
+        var target = $(this).attr('href');
+        
+        $tabButtonItem.removeClass(activeClass);
+        $(this).parent().addClass(activeClass);
+        $tabSelect.val(target);
+        $tabContents.hide();
+        $(target).show();
+        e.preventDefault();
+
     });
-  
+
+
     $tabSelect.on('change', function() {
-      var target = $(this).val(),
-          targetSelectNum = $(this).prop('selectedIndex');
-  
-      $tabButtonItem.removeClass(activeClass);
-      $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
-      $tabContents.hide();
-      $(target).show();
+
+        var target = $(this).val(),
+            targetSelectNum = $(this).prop('selectedIndex');
+            
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+        $tabContents.hide();
+        $(target).show();
+
     });
-  });
 
-        $( document ).ready(function() {
-            $('.calendario-dinam').datepicker({
-                format: "dd MM, yyyy",
-                todayBtn: "linked",
-                language: "es",
-                autoclose: true,
-                todayHighlight: true,
-                toggleActive: true
-            });
+    });
+
+    $( document ).ready(function() {
+        $('.calendario-dinam').datepicker({
+            format: "dd MM, yyyy",
+            todayBtn: "linked",
+            language: "es",
+            autoclose: true,
+            todayHighlight: true,
+            toggleActive: true
         });
+    });
 
-  
+    

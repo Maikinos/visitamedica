@@ -30,10 +30,11 @@
 
     <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-theme="sap_bluecrystal" data-sap-ui-libs="sap.ui.commons, sap.ui.ux3, sap.ui.table"></script>
 
-    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <script src="assets/js/gijgo.js"></script>
 </head>
 
-<body class="horizontal-nav skin-megna-dark fixed-layout">
+<body class="horizontal-nav skin-megna-dark fixed-layout" style="padding-bottom: 25px;">
 
     <button id="botonm1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Modal1</button>
 
@@ -43,6 +44,7 @@
             <p class="loader__label">Quimédica - Registro de Visitas</p>
         </div>
     </div>
+
 
     <header id="topnav">
         
@@ -61,10 +63,13 @@
                 <li class="dropdown notification-list d-none d-sm-block">
                     <form role="search" class="app-search">
                         <div class="form-group mb-0">
+
                             <input type="text" class="form-control" placeholder="Buscar..">
+
                             <button type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
+
                         </div>
                     </form>
                 </li>
@@ -103,7 +108,7 @@
                             <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="fas fa-circle"></i> Agenda</a> 
                             <a class="dropdown-item d-block" href="#"><i class="fas fa-circle"></i> Configuraciones</a> 
                                 <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-circle"></i> Cerrar Sesión</a>
+                                <a class="dropdown-item text-danger" href="#"><i class="fas fa-circle"></i> Cerrar Sesión</a>
                         </div>
                     </div>
                 </li>
@@ -113,8 +118,8 @@
                         <div class="lines"><span></span><span></span><span></span></div>
                     </a>
                 </li>
-
-                    </ul>
+            
+                </ul>
 
                 </div>
                 
@@ -126,7 +131,7 @@
 
         <div class="navbar-custom">
             <div class="container-fluid">
-
+                
                 <div id="navigation">
                     <ul class="navigation-menu">
                         
@@ -158,7 +163,7 @@
                                 <li><a href="#">Cumpleaños</a></li>
                             </ul>
                         </li>
-
+                        
                         <li class="has-submenu">
                             <a href="#"><i class="fas fa-circle"></i>Gestión de control</a>
                             <ul class="submenu">
@@ -262,6 +267,7 @@
                                                             <span class="" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Contactos Visitados en todo el Ciclo." style="cursor: pointer;">22</span>
                                                             
                                                         </div>
+                                                        
                                             <div class="clearfix bajado"></div>
                                             <div class="filtros-bg">
                                         <ul class="unstyled centered">
@@ -284,6 +290,7 @@
                                             <div id="calendar"></div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -305,11 +312,12 @@
                             <h5 style="font-size: 15px;margin-bottom: 22px;">Selecciona la Fecha y Hora del día al cual deseas clonar:</h5>
                             
                             <!--DATEPICKER-->
-                            <div class="input-group date calendario-dinam">
-                                <input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
-                              </div>
+                            <div class="datos-picker">
+                                <input class="datepicker" width="150" />
+                            </div>
 
-    <button class="btn btn-info">Clonar</button>
+                            <button class="btn btn-info">Clonar</button>
+
                         </div>
                       </div>
                     </div>
@@ -334,6 +342,7 @@
       </div>
     </div>
   </div>
+
 
 <!--MODAL 2 - MEDICOS-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -406,7 +415,7 @@
                                                         <th scope="col">Médico</th>
                                                         <th scope="col">Hora / Turno</th>
                                                         <th scope="col">Dirección</th>
-                                                        <th scope="col">Última Visita</th>
+                                                        <th scope="col">Últ. Visita</th>
                                                         <th scope="col"></th>
                                                       </tr>
                                                     </thead>
@@ -414,7 +423,9 @@
                                                       <tr>
                                                             <th scope="row" class="relativo-c1">NORA ALVARADO <span class="infomed" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"><i class="fas fa-info-circle"></i></span></th>
                                                         <td>
-                                                            <img src="assets/images/img-clock.png" alt="" class="imagen-ref">
+                                                                <div class="datos-picker">
+                                                                        <input class="timepicker" width="130" />
+                                                                   </div>
                                                         </td>
                                                         <td>
                                                                 <button type="button" class="btn acciones-medicos vermapa"><i class="fas fa-map-marked-alt"></i></button>
@@ -432,7 +443,9 @@
                                                       <tr>
                                                             <th scope="row" class="relativo-c2">RODOLFO SUAREZ <span class="infomed"><i class="fas fa-info-circle"></i></span></th>
                                                             <td>
-                                                                <img src="assets/images/img-clock.png" alt="" class="imagen-ref">
+                                                                    <div class="datos-picker">
+                                                                            <input class="timepicker" width="130" />
+                                                                       </div>
                                                             </td>
                                                             <td>
                                                                     <button type="button" class="btn acciones-medicos vermapa"><i class="fas fa-map-marked-alt"></i></button>
@@ -465,7 +478,7 @@
                         <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Médico 02
+                            NORA ALVARADO PORTALINO
                         </button>
                         <div class="contiene-acciones-med">
                         
@@ -485,7 +498,7 @@
                         <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Médico 05
+                            DEMETRIO CARLOS ANCHANTE ANYARIN
                         </button>
                         <div class="contiene-acciones-med">
                         
@@ -504,7 +517,7 @@
                         <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Médico 07
+                            JEAN CARLOS CRIADO HUERTO
                         </button>
                         <div class="contiene-acciones-med">
                         
@@ -528,9 +541,11 @@
                         <div class="card">
                         <div class="card-header" id="heading10">
                         <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
-                        Médico 10
-                        </button>
+
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
+                                VICTOR HUGO MATEO MONTALVO
+                            </button>
+
                         <div class="contiene-acciones-med">
                         <button type="button" class="btn acciones-medicos confirmasobrereporte"><i class="fas fa-check"></i></button>
                         <button type="button" class="btn acciones-medicos"><i class="fas fa-puzzle-piece"></i></button>
@@ -541,15 +556,12 @@
                         <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
                         <div class="card-body">
                             
-                            <!--DATEPICKER-->
-                            <div class="input-group date calendario-dinam">
-                                <input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
-                              </div>
+                        <!--DATEPICKER-->
+                        <div class="datos-picker">
+                            <input class="datepicker" width="150" />
+                            <input class="timepicker" width="130" />
+                        </div>
 
-                            <select class="form-control col-5" id="Turno" style="text-align: center;"> 
-                                <option>8:00 a.m.</option> 
-                                <option>6:00 p.m.</option>
-                              </select>
                      <br><br>
                       
                       <hr>
@@ -634,6 +646,7 @@
 </div>
 <hr>
 
+<div class="col-7" style="display: inline-block;">
 <h5 style="margin-top: 30px;font-size: 16px;">Malla Promocional:</h5>
 <!--MALLA PROMOCIONAL-->
 <div class="form-check col-5" style="display: inline-block;">
@@ -656,7 +669,27 @@
                 <input type="checkbox" class="form-check-input" value="">Agenda
             </label>
         </div>
+    </div>
 
+    <div class="conteo-pacientes">
+
+        <h5 style="margin-top: 30px;font-size: 16px;">Cantidad de Pacientes:</h5>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">0</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
+        </div>
+
+    </div>      
+<br><br>
         <hr>
         <div class="form-group">
                 <label for="comment">Comentario Adicional:</label>
@@ -669,7 +702,7 @@
                         <div class="card-header" id="heading11">
                         <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapseThree">
-                        Médico 14
+                            RODOLFO SUAREZ GUTIERREZ
                         </button>
                         <div class="contiene-acciones-med">
                         <button type="button" class="btn acciones-medicos"><i class="fas fa-check"></i></button>
@@ -687,11 +720,12 @@
                         </div>
                         </div>
 
-                        <!--<div class="container ret">
-                            <h5 class="h5tope adicionales"><i class="fas fa-circle"></i> Visitas Adicionales</h5>
+                    <!--<div class="container ret">
+                        <h5 class="h5tope adicionales"><i class="fas fa-circle"></i> Visitas Adicionales</h5>
                         <div id="accordion">
                         <div class="card" style="margin-bottom: 25px;">
                             <div class="card-header" id="heading12">
+
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseThree">
                                 Médico 27
@@ -702,13 +736,14 @@
                                 <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
                                 </div>
                             </h5>
+
                             </div>
                             <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
                             <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>-->
 
-             <!-- COMENTARIOS ADICIONALES -->
+            <!--COMENTARIOS ADICIONALES-->
         
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
@@ -716,7 +751,7 @@
         </div>
         </div>
     </div>
-    </div>-->
+    </div>
         </div>
     </div>
     </div>
@@ -814,6 +849,22 @@
   </div>
 
   
+
+    <script>
+        $('.datepicker').datepicker({
+            uiLibrary: 'bootstrap4', size: 'default', iconsLibrary: 'fontawesome',
+            calendarWeeks: true, modal: true, footer: true, format: 'dd mmm yyyy',
+            value: '14 Nov 2018'
+        });
+
+        $('.timepicker').timepicker({
+            uiLibrary: 'bootstrap4', size: 'default', iconsLibrary: 'fontawesome',
+            calendarWeeks: true, modal: true, footer: true, format: 'hh:mm tt',
+            value: '09:00 am'
+        });
+    </script>
+    
+  
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src='assets/js/jquery.min.js'></script>
 
@@ -885,7 +936,8 @@
     </script>
 
     <script src="assets/js/seleccion-medicos.js"></script>
-    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    
 
 
 </body>

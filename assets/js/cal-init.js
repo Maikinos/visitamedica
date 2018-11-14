@@ -169,7 +169,7 @@
             //SOLTAR EL MEDICO EN LA FECHA SELECCIONADPO
             drop: function(date) { $this.onDrop($(this), date); },
             select: function (start, end, allDay) { $this.onSelect(start, end, allDay); },
-            eventClick: function(calEvent, jsEvent, view) { $this.onEventClick(calEvent, jsEvent, view); }
+            //eventClick: function(calEvent, jsEvent, view) { $this.onEventClick(calEvent, jsEvent, view); }
         });
 
         //on new event

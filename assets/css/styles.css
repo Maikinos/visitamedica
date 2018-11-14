@@ -125,12 +125,22 @@ h5.mb-0 button {
     font-size: 14px;
 }
 
+/*
 .acciones-medicos{
     width: 25px;
     text-align: center;
     height: 25px;
     font-size: 12px;
     padding: 0;
+}*/
+
+.acciones-medicos {
+    width: 38px;
+    text-align: center;
+    height: 35px;
+    font-size: 16px;
+    padding: 0px;
+    box-shadow: none;
 }
 
 .contiene-acciones-med{
@@ -188,8 +198,10 @@ h5.mb-0 button {
         vertical-align: middle !important;
     }
 
-    .planificacion-statmd tr th{
+    .planificacion-statmd tr th {
         vertical-align: middle !important;
+        text-shadow: none;
+        padding: 0;
     }
 
     .planificacion-statmd td:last-child{
@@ -628,5 +640,140 @@ h5.mb-0 button {
     }
 
     #accordion .collapse.show {
-        border: 2px solid #007bff;
+        border: 2px solid #343a40;
+    }
+
+    .conteo-pacientes{
+        display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    }
+
+/*PICKERS*/
+
+    .datepicker table tr td.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:hover, .datepicker table tr td.selected, .datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected:hover, .datepicker table tr td.today, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover, .datepicker table tr td.today:hover {
+        background-color: transparent !important;
+    }
+
+    .gj-picker-bootstrap table tr td.selected.gj-cursor-pointer div {
+        background-color: #e52929 !important;
+        border-color: #e52929 !important;
+    }
+
+    .datepicker table tr td.today {
+        border: 1px solid #e52929;
+        border-radius: 100%;
+        display: table-caption;
+    }
+
+    .datepicker table tr td.today.selected{
+        border: 0;
+    }
+
+    .gj-picker-bootstrap [role="body"] [role="arrow"] {
+        background-color: #e52929 !important;
+    }
+
+    .gj-picker-bootstrap .arrow-begin {
+        background-color: #e52929 !important;
+    }
+
+    .gj-picker-bootstrap .arrow-end {
+        border: 16px solid #e52929 !important;
+    }
+
+    .gj-picker-bootstrap [role="header"] {
+        background: #dc3545 !important;
+        color: #fff !important;
+    }
+
+    .gj-picker-bootstrap .selected {
+        color: #fff !important;
+    }
+
+    .gj-picker .modal-footer button:last-child {
+        background: #dc3545 !important;
+        box-shadow: none;
+        color: white;
+        margin-top: 3px;
+    }
+
+    .datos-picker{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .datos-picker .gj-datepicker{
+        width: 150px;
+    height: 35px;
+    }
+
+    .datos-picker .gj-datepicker input{
+        max-width: 100px;
+        font-size: 13px;
+        padding: 0;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .datos-picker .gj-datepicker span button{
+        padding: 0px;
+        text-align: center;
+        /* padding-left: 2px; */
+        box-shadow: none;
+        color: #212529 !important;
+        background-color: #dee2e6!important;
+        border-color: #dee2e6!important;
+    }
+
+    .datos-picker .gj-datepicker span button i{
+        font-size: 17px;
+    }
+
+
+
+    .datos-picker .gj-timepicker{
+        width: 150px;
+    height: 35px;
+    }
+
+    .datos-picker .gj-timepicker input{
+        max-width: 100px;
+        font-size: 13px;
+        padding: 0;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .datos-picker .gj-timepicker span button {
+        padding: 0px;
+        text-align: center;
+        /* padding-left: 2px; */
+        box-shadow: none;
+        color: #212529 !important;
+        background-color: #dee2e6!important;
+        border-color: #dee2e6!important;
+    }
+
+    .datos-picker .gj-timepicker span button i{
+        font-size: 17px;
+    }
+
+
+    #exampleModalconfirma .datos-picker{
+        display: inline-flex;
+    }
+
+    .mb-0 .contiene-acciones-med button{
+        width: 25px;
+        height: 25px;
+    }
+
+    .planificacion-statmd tbody tr th {
+        padding: 0;
+        font-weight: 500;
+        text-shadow: none;
+        font-size: 12px;
+        text-transform: capitalize;
     }
