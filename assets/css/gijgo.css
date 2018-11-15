@@ -612,6 +612,7 @@ ul.gj-list-md li.disabled>[data-role="wrapper"]>[data-role="display"] {
 	right: 1px;
 	bottom: 1px;
 }
+
 .gj-resizable-sw {
 	cursor: sw-resize;
 	width: 9px;
@@ -619,6 +620,7 @@ ul.gj-list-md li.disabled>[data-role="wrapper"]>[data-role="display"] {
 	left: -5px;
 	bottom: -5px;
 }
+
 .gj-resizable-nw {
 	cursor: nw-resize;
 	width: 9px;
@@ -626,6 +628,7 @@ ul.gj-list-md li.disabled>[data-role="wrapper"]>[data-role="display"] {
 	left: -5px;
 	top: -5px;
 }
+
 .gj-resizable-ne {
 	cursor: ne-resize;
 	width: 9px;
@@ -646,7 +649,7 @@ ul.gj-list-md li.disabled>[data-role="wrapper"]>[data-role="display"] {
     overflow-y: scroll;
 }
 
-/** Bootstrap 3 **/
+/** Bootstrap **/
 .gj-dialog-bootstrap {
     overflow: hidden;
     z-index: 1202;
@@ -2664,11 +2667,9 @@ ul.gj-list-md li.disabled > [data-role="wrapper"] > [data-role="expander"] {
     background-repeat: repeat-x;
 }
 
-
 .gj-colorpicker [role="right-icon"] {
     cursor: pointer;
 }
-
 
 /* Material Design */
 .gj-colorpicker-md {

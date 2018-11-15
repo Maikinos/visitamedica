@@ -91,7 +91,13 @@ $(".btn-number[data-type='bin']").click(function (e) {
         $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
         $tabContents.hide();
         $(target).show();
+        $(".sipasar").click(function () {
+            alert("Su Visita ha sido Registrada correctamente.");
+        });
 
+        $(".sielimina").click(function () {
+            alert("Se eliminó correctamente.");
+        });
     });
 
     });
@@ -105,6 +111,13 @@ $(".btn-number[data-type='bin']").click(function (e) {
             todayHighlight: true,
             toggleActive: true
         });
+
+        $(".sipasar").click(function () {
+            alert("Su Visita ha sido Registrada correctamente.");
+        });
+
+        $(".sielimina").click(function () {
+            alert("Se eliminó correctamente.");
+        });
     });
 
-    

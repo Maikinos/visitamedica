@@ -367,7 +367,7 @@ h5.mb-0 button {
             position: fixed;
             top: 100px;
             right: -208px;
-            z-index: 99999;
+            z-index: 100;
             background-color: white;
             /* border: 1px solid; */
             width: 205px;
@@ -776,4 +776,71 @@ h5.mb-0 button {
         text-shadow: none;
         font-size: 12px;
         text-transform: capitalize;
+    }
+
+
+    .btn-link[data-dismiss="modal"] {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .form-check-inline .form-check-input {
+        box-shadow: none;
+    }
+
+    input[type=checkbox]{
+        box-shadow: none;
+    }
+
+    #exampleModalLongRegistro .form-check-label {
+        font-weight: 400;
+        text-shadow: none;
+    }
+
+    @media(max-width: 380px){
+        .contiene-acciones-med {
+            position: absolute;
+            right: -9px;
+            z-index: 100;
+            top: -37px;
+            background-color: white;
+            border: 1px solid #e3e3e3;
+            padding: 2px 3px;
+        }
+
+        #accordion .card {
+            margin-top: 42px;
+        }
+    }
+
+    .card.infoderegistrovisita * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card.infoderegistrovisita {
+        padding: 10px;
+    }
+
+    .card.infoderegistrovisita .card-title{
+        margin-bottom: 15px;
+    }
+
+    .card.infoderegistrovisita .tt {
+        display: inline-flex;
+        font-size: 15px;
+    }
+
+    .card.infoderegistrovisita .rr {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .sapUiUx3FFLstHeadTxt {
+        background-color: #dc3545;
+        text-shadow: none;
+        color: white !important;
+        font-size: 14px !important;
+        font-weight: 600;
+        text-transform: uppercase;
     }

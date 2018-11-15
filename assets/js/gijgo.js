@@ -252,15 +252,15 @@ gj.documentManager = {
 gj.core = {
     messages: {
         'en-us': {
-            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            monthShortNames: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],            
-            weekDaysMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-            weekDaysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            weekDays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthShortNames: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],            
+            weekDaysMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            weekDaysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+            weekDays: ["Domingo", "Lunes", "MArtes", "Miércoles", "Jueves", "Viernes", "Sábado"],
             am: 'AM',
             pm: 'PM',
-            ok: 'Ok',
-            cancel: 'Cancel'
+            ok: 'Aceptar',
+            cancel: 'Cancelar'
         }
     },
 
@@ -396,7 +396,7 @@ gj.core = {
 
         for (i = 0; i < formatParts.length; i++) {
             separator = (separators[i] || '');
-            switch (formatParts[i]) {
+            switch (formatParts[i]) {// Colocación 
                 case 's':
                     result += date.getSeconds() + separator;
                     break;
@@ -14379,12 +14379,14 @@ gj.datepicker.methods = {
         }
 
         $rightIcon.attr('role', 'right-icon');
+
         if ($wrapper.length === 0) {
             $wrapper = $('<div role="wrapper" />').addClass(data.style.wrapper); // The css class needs to be added before the wrapping, otherwise doesn't work.
             $datepicker.wrap($wrapper);
         } else {
             $wrapper.addClass(data.style.wrapper);
         }
+
         $wrapper = $datepicker.parent('div[role="wrapper"]');
 
         data.width && $wrapper.css('width', data.width);
@@ -14401,7 +14403,9 @@ gj.datepicker.methods = {
                 $wrapper.addClass('input-group-lg');
                 $datepicker.addClass('form-control-lg');
             }
-        } else {
+        } 
+
+        else {
             if (data.size === 'small') {
                 $wrapper.addClass('small');
             } else if (data.size === 'large') {
@@ -14410,13 +14414,17 @@ gj.datepicker.methods = {
         }
 
         $rightIcon.on('click', function (e) {
+
             var $calendar = $('body').find('[role="calendar"][guid="' + $datepicker.attr('data-guid') + '"]');
+
             if ($calendar.is(':visible')) {
                 gj.datepicker.methods.close($datepicker);
             } else {
                 gj.datepicker.methods.open($datepicker, data);
             }
+
         });
+
         $wrapper.append($rightIcon);
 
         $calendar = gj.datepicker.methods.createCalendar($datepicker, data);
@@ -14460,11 +14468,11 @@ gj.datepicker.methods = {
         $calendar.attr('year', date.getFullYear());
 
         gj.datepicker.methods.renderHeader($datepicker, $calendar, data, date);
-
         $body = $('<div role="body" />');
         $calendar.append($body);
-
+        
         if (data.footer) {
+
             $footer = $('<div role="footer" class="' + data.style.footer + '" />');
 
             $btnCancel = $('<button class="' + data.style.button + '">' + gj.core.messages[data.locale].cancel + '</button>');
@@ -14485,6 +14493,7 @@ gj.datepicker.methods = {
             $footer.append($btnOk);
 
             $calendar.append($footer);
+            
         }
 
         $calendar.hide();
@@ -14516,6 +14525,7 @@ gj.datepicker.methods = {
                 $year.removeClass('selected');
             });
             $date.html(gj.core.formatDate(date, 'ddd, mmm dd', data.locale));
+            
             $header.append($date);
             $calendar.append($header);
         }
@@ -14529,8 +14539,9 @@ gj.datepicker.methods = {
     },
 
     createNavigation: function ($datepicker, $body, $table, data) {
-        var $row, $navigator, $thead = $('<thead/>');
 
+        var $row, $navigator, $thead = $('<thead/>');
+        
         $navigator = $('<div role="navigator" />');
         $navigator.append($('<div>' + data.icons.previousMonth + '</div>').on('click', gj.datepicker.methods.prev($datepicker, data)));
         $navigator.append($('<div role="period"></div>').on('click', gj.datepicker.methods.changePeriod($datepicker, data)));
