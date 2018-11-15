@@ -844,3 +844,7 @@ h5.mb-0 button {
         font-weight: 600;
         text-transform: uppercase;
     }
+
+    .sapUiTableCol {
+        background-color: #dc35451c !important;
+    }

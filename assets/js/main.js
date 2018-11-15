@@ -11,6 +11,7 @@ $('.btn-number').click(function(e){
             if(currentVal > input.attr('min')) {
                 input.val(currentVal - 1).change();
             } 
+
             if(parseInt(input.val()) == input.attr('min')) {
                 $(this).attr('disabled', true);
             }
@@ -20,6 +21,7 @@ $('.btn-number').click(function(e){
             if(currentVal < input.attr('max')) {
                 input.val(currentVal + 1).change();
             }
+            
             if(parseInt(input.val()) == input.attr('max')) {
                 $(this).attr('disabled', true);
             }
@@ -29,14 +31,18 @@ $('.btn-number').click(function(e){
         input.val(0);
     }
 });
+
 $('.input-number').focusin(function(){
    $(this).data('oldValue', $(this).val());
 });
+
 $('.input-number').change(function() {
     
     minValue =  parseInt($(this).attr('min'));
     maxValue =  parseInt($(this).attr('max'));
     valueCurrent = parseInt($(this).val());
+
+    //este era el pecado
     
     name = $(this).attr('name');
     if(valueCurrent >= minValue) {
@@ -53,25 +59,25 @@ $('.input-number').change(function() {
     }
     
 });
-$(".btn-number[data-type='bin']").click(function (e) {
-  $('.input-number').val('0');
-  });
-
+    $(".btn-number[data-type='bin']").click(function (e) {
+        $('.input-number').val('0');
+    });
 
     /*FUNCIONALIDAD DE TAB*/
     $(function() {
-    var $tabButtonItem = $('#tab-button li'),
+        
+        var $tabButtonItem = $('#tab-button li'),
         $tabSelect = $('#tab-select'),
         $tabContents = $('.tab-contents'),
         activeClass = 'is-active';
 
-    $tabButtonItem.first().addClass(activeClass);
-    $tabContents.not(':first').hide();
+        $tabButtonItem.first().addClass(activeClass);
+        $tabContents.not(':first').hide();
 
-    $tabButtonItem.find('a').on('click', function(e) {
-
-        var target = $(this).attr('href');
+        $tabButtonItem.find('a').on('click', function(e) {
         
+        var target = $(this).attr('href');
+
         $tabButtonItem.removeClass(activeClass);
         $(this).parent().addClass(activeClass);
         $tabSelect.val(target);
@@ -86,11 +92,12 @@ $(".btn-number[data-type='bin']").click(function (e) {
 
         var target = $(this).val(),
             targetSelectNum = $(this).prop('selectedIndex');
-            
+        
         $tabButtonItem.removeClass(activeClass);
         $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
         $tabContents.hide();
         $(target).show();
+
         $(".sipasar").click(function () {
             alert("Su Visita ha sido Registrada correctamente.");
         });
@@ -103,6 +110,7 @@ $(".btn-number[data-type='bin']").click(function (e) {
     });
 
     $( document ).ready(function() {
+
         $('.calendario-dinam').datepicker({
             format: "dd MM, yyyy",
             todayBtn: "linked",
@@ -119,5 +127,6 @@ $(".btn-number[data-type='bin']").click(function (e) {
         $(".sielimina").click(function () {
             alert("Se eliminó correctamente.");
         });
+
     });
 
