@@ -130,15 +130,15 @@
 
         var defaultEvents =  [{
                 title: 'Jean Criado',
-                start: new Date($.now() + 206800000),
+                start: new Date($.now() + 2073600),
                 className: 'bg-info'
             }, {
                 title: 'Nora Alvarado',
-                start: new Date($.now() + 306800000),
+                start: new Date($.now() - 106800000),
                 className: 'bg-info'
             }, {
                 title: 'Victor Mateo',
-                start: new Date($.now() + 306800000),
+                start: new Date($.now() - 206800000),
                 className: 'bg-success'
             },{
                 title: 'Rodolfo Suarez',
