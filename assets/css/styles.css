@@ -291,11 +291,11 @@ h5.mb-0 button {
     }
 
     .indicador-r{
-        background-color: #28a745;
+        /*background-color: #28a745;*/
     }
 
     .indicador-sr{
-        background-color: red;
+        /*background-color: red;*/
     }
 
     .indicador-a{
@@ -534,7 +534,7 @@ h5.mb-0 button {
 
 
     .contiene-visita-u{
-        max-height: 220px;
+       /* max-height: 220px;*/
     overflow: auto;
     }
 
@@ -633,6 +633,7 @@ h5.mb-0 button {
 
     hr{
         border-top: 2px dashed #bfbfbf;
+        /*border-color: #e52929;*/
     }
 
     #accordion .card {
@@ -847,4 +848,173 @@ h5.mb-0 button {
 
     .sapUiTableCol {
         background-color: #dc35451c !important;
+    }
+
+    .infoderegistrovisita h5{
+        color: #e52929;
+    }
+
+    .thora-registrada{
+        color: #e52929;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    margin-right: 10px;
+    }
+
+    .thora-registrada:hover{
+        text-decoration: none;
+    }
+
+
+    .confirmasobrereporte {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+    .mb-0 button {
+        text-decoration: none !important;
+    }
+
+    .puzz {
+        background-color: #b400ff;
+        color: white;
+    }
+
+    .puzz i{
+        font-size: 12px;
+    }
+
+    .eliminareporte {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+
+
+
+    /**/
+    .card .card-body .message {
+        padding-left: 80px;
+      }
+      .card .card-body .message::after {
+        clear: both;
+      }
+      
+      .card .card-body .actions {
+        margin-top: 5px;
+        text-align: right;
+      }
+      
+
+      #exampleModal1 .card{
+          border: 0px;
+      }
+
+      #exampleModal1 .modal-header{
+        padding: 12px;
+      }
+
+      #exampleModal1 .card-body{
+        padding: 10px 22px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      #exampleModal1 .modal-footer{
+        padding: 0;
+        padding-right: 32px;
+        padding-bottom: 10px;
+      }
+
+
+       
+	/* Custom checkbox */
+	.custom-checkbox {
+		position: relative;
+	}
+	.custom-checkbox input[type="checkbox"] {    
+		opacity: 0;
+		position: absolute;
+		margin: 5px 0 0 3px;
+		z-index: 9;
+	}
+	.custom-checkbox label:before{
+		width: 18px;
+		height: 18px;
+	}
+	.custom-checkbox label:before {
+            margin-top: 8px;
+            margin-left: 10px;
+		content: '';
+		display: inline-block;
+		vertical-align: text-top;
+		background: white;
+		border: 1px solid #bbb;
+		border-radius: 2px;
+		box-sizing: border-box;
+		z-index: 2;
+	}
+	.custom-checkbox input[type="checkbox"]:checked + label:after {
+        margin-top: 8px;
+        margin-left: 10px;
+		content: '';
+		position: absolute;
+		left: 6px;
+		top: 3px;
+		width: 6px;
+		height: 11px;
+		border: solid #000;
+		border-width: 0 3px 3px 0;
+		transform: inherit;
+		z-index: 3;
+		transform: rotateZ(45deg);
+	}
+	.custom-checkbox input[type="checkbox"]:checked + label:before {
+		border-color: #03A9F4;
+		background: #03A9F4;
+    }
+    
+	.custom-checkbox input[type="checkbox"]:checked + label:after {
+		border-color: #fff;
+    }
+    
+	.custom-checkbox input[type="checkbox"]:disabled + label:before {
+		color: #b8b8b8;
+		cursor: auto;
+		box-shadow: none;
+		background: #ddd;
+    }
+    
+    .copyclonamed {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+    .copyclonamed:hover {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+        border: 0;
+    }
+
+    .copyclonamed:focus {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+        border: 0;
+    }
+
+    #exampleModalconfirmamed{
+        background-color: #00000085;
+    }
+
+
+    .historico{
+        float: left;
+        border: 0;
+        background-color: purple;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
     }

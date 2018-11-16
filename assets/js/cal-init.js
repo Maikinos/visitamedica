@@ -134,11 +134,11 @@
                 className: 'bg-info'
             }, {
                 title: 'Nora Alvarado',
-                start: new Date($.now() - 106800000),
+                start: new Date($.now() - 206800000),
                 className: 'bg-info'
             }, {
                 title: 'Victor Mateo',
-                start: new Date($.now() - 206800000),
+                start: new Date($.now() - 306800000),
                 className: 'bg-success'
             },{
                 title: 'Rodolfo Suarez',
@@ -247,8 +247,8 @@ $( "#filtros-busqueda-movil" ).click(function() {
 
   var indicadorcreportada = $('.fc-day-grid-event.bg-info').length;
   var indicadorcnoreportada = $('.fc-day-grid-event.bg-success').length;
-    $('span.indicador-r').html(indicadorcreportada);
-    $('span.indicador-sr').html(indicadorcnoreportada);
+    $('span.indicador-r').html("( " + indicadorcreportada + " )");
+    $('span.indicador-sr').html("( " + indicadorcnoreportada + " )");
 
 /* MUESTRA MODAL SEGUN SEA INSTITUCION O MEDICO */
 
@@ -287,8 +287,8 @@ $('.fc-event-container').on('click', function(){
    $('#calendar').bind("DOMSubtreeModified",function(){
     var indicadorcreportada = $('.fc-day-grid-event.bg-info').length;
   var indicadorcnoreportada = $('.fc-day-grid-event.bg-success').length;
-    $('span.indicador-r').html(indicadorcreportada);
-    $('span.indicador-sr').html(indicadorcnoreportada);
+  $('span.indicador-r').html("( " + indicadorcreportada + " )");
+  $('span.indicador-sr').html("( " + indicadorcnoreportada + " )");
 
     /* MUESTRA MODAL SEGUN SEA INSTITUCION O MEDICO */
 

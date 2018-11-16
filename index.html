@@ -257,30 +257,31 @@
                                         
                                         <div class="card-body b-l calender-sidebar">
 
-                                                <div class="indicadores-pordia">
+                                                <div class="indicadores-pordia" style="max-width: 164px;">
                                                     <h5>Indicadores del Ciclo: </h5>
-                                                    <span class="indicador-r" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas Reportadas." style="cursor: pointer;">0</span>
-                                                    <span class="indicador-sr" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas Sin Reportar." style="cursor: pointer;">0</span>
+                                                    <span style="background-color: #ffc107;" class="" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Visitas Registradas" style="cursor: pointer;">4</span>
                                                 </div>
                                                 <!--<span class="indicador-a" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas No Programadas." style="cursor: pointer;">10</span>-->
 
                                             
-                                                <div class="indicadores-pordia segundo">
+                                                <div class="indicadores-pordia segundo" style="margin-right: 15px;">
                                                     <h5>Contactos Visitados: </h5>
                                                     <span class="" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Contactos Visitados en todo el Ciclo." style="cursor: pointer;">22</span>
                                                 </div>
+
+                                                <button class="historico" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-list-alt"></i> Histórico</button>
 
                                             <div class="clearfix bajado"></div>
                                             <div class="filtros-bg">
                                         <ul class="unstyled centered">
                                             <li>
                                                 <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1" checked>
-                                                <label for="styled-checkbox-1">Reportadas</label>
+                                                <label for="styled-checkbox-1">Reportadas <span class="indicador-r"></span> </label>
                                             </li>
 
                                             <li>
                                                 <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
-                                                <label for="styled-checkbox-2">Sin Reportar</label>
+                                                <label for="styled-checkbox-2">Sin Reportar <span class="indicador-sr"></span> </label>
                                             </li>
 
                                             <li style="display:none;">
@@ -312,7 +313,7 @@
                         </div>
                         <div class="modal-body">
 
-                            <h5 style="font-size: 15px;margin-bottom: 22px;">Selecciona la Fecha y Hora del día al cual deseas clonar:</h5>
+                            <h5 style="font-size: 15px;margin-bottom: 22px;">Selecciona la Fecha del día al cual deseas clonar:</h5>
                             
                             <!--DATEPICKER-->
                             <div class="datos-picker">
@@ -474,20 +475,75 @@
                                         </div>
                         </div>
                         <div id="tab02" class="tab-contents">
+                                <div class="container ret" style="background-color: #e529290d;padding: 5px;border: 1px solid #ff000026;">
+                                        <h5 class="h5tope sinreportar"><i class="fas fa-circle"></i> Visitas Sin Reportar <strong style="font-weight: 600;">(Sólo Planificados)</strong></h5>
+                                    <div id="accordion">
+                                    <div class="card">
+                                    <div class="card-header" id="heading10">
+                                            
+                                    <h5 class="mb-0">
+                                            <span class="custom-checkbox">
+                                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                                    <label for="checkbox1"></label>
+                                                </span>
+                                        <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
+                                            
+                                            <span class="thora-registrada">10:25 a.m.</span> VICTOR HUGO MATEO MONTALVO 
+                                        </button>
+            
+                                    <div class="contiene-acciones-med">
+                                            <button type="button" class="btn acciones-medicos copyclonamed btn-info" data-toggle="modal" data-target="#exampleModalconfirmamed"><i class="fas fa-copy"></i></button>
+                                    <!--<button type="button" class="btn acciones-medicos confirmasobrereporte"><i class="fas fa-check"></i></button>-->
+                                    <!--<button type="button" class="btn acciones-medicos puzz" data-toggle="modal" data-target="#exampleModalLongRegistro"><i class="fas fa-puzzle-piece"></i></button>-->
+                                    <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                    </h5>
+                                    </div>
+                                    </div>
+                                    <div class="card">
+                                    <div class="card-header" id="heading11">
+                                    <h5 class="mb-0">
+                                            <span class="custom-checkbox">
+                                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                                    <label for="checkbox2"></label>
+                                                </span>
+                                    <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
+                                        <span class="thora-registrada">06:00 p.m.</span>  RODOLFO SUAREZ GUTIERREZ 
+                                    </button>
+                                    <div class="contiene-acciones-med">
+                                            <button type="button" class="btn acciones-medicos copyclonamed btn-info" data-toggle="modal" data-target="#exampleModalconfirmamed"><i class="fas fa-copy"></i></button>
+                                    <!--<button type="button" class="btn acciones-medicos confirmasobrereporte"><i class="fas fa-check"></i></button>-->
+                                    <!--<button type="button" class="btn acciones-medicos puzz" data-toggle="modal" data-target="#exampleModalLongRegistro"><i class="fas fa-puzzle-piece"></i></button>-->
+                                    <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
+                                    </div>
+                                    </h5>
+                                    </div>
+                                    </div>
 
-                        <div class="container ret">
-                        <h5 class="h5tope reportados"><i class="fas fa-circle"></i> Reportados</h5>
+                                    <div class="modal-footer">
+                                            <button style="background-color: #dc3545bd;border-color: #dc3545bd;" type="button" class="btn btn-primary" data-dismiss="modal">Registrar Visitas</button>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+                        <div class="container ret" style="padding: 5px;">
+                        <h5 class="h5tope reportados"><i class="fas fa-circle"></i> Visitas Reportadas</h5>
                         <div id="accordion">
                         <div class="card">
                         <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
-                            NORA ALVARADO PORTALINO
+                                <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                        <label for="checkbox3"></label>
+                                    </span>
+                        <button style="color: #496f98;" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
+                            <span class="thora-registrada">09:00 a.m.</span>NORA ALVARADO PORTALINO 
                         </button>
                         <div class="contiene-acciones-med">
                         
-                        
-                        <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn acciones-medicos copyclonamed btn-info" data-toggle="modal" data-target="#exampleModalconfirmamed"><i class="fas fa-copy"></i></button>
+                        <!--<button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>-->
                         </div>
                         </h5>
                         </div>
@@ -495,13 +551,17 @@
                         <div class="card">
                         <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
-                            DEMETRIO CARLOS ANCHANTE ANYARIN
+                                <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                        <label for="checkbox4"></label>
+                                    </span>
+                        <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
+                            <span class="thora-registrada">09:30 a.m.</span>DEMETRIO CARLOS ANCHANTE ANYARIN 
                         </button>
                         <div class="contiene-acciones-med">
                         
-                        
-                        <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn acciones-medicos copyclonamed btn-info" data-toggle="modal" data-target="#exampleModalconfirmamed"><i class="fas fa-copy"></i></button>
+                        <!--<button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>-->
                         </div>
                         </h5>
                         </div>
@@ -509,13 +569,17 @@
                         <div class="card">
                         <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
-                            JEAN CARLOS CRIADO HUERTO
+                                <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                        <label for="checkbox5"></label>
+                                    </span>
+                        <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
+                            <span class="thora-registrada">03:00 p.m.</span>JEAN CARLOS CRIADO HUERTO 
                         </button>
                         <div class="contiene-acciones-med">
                         
-                        
-                        <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn acciones-medicos copyclonamed btn-info" data-toggle="modal" data-target="#exampleModalconfirmamed"><i class="fas fa-copy"></i></button>
+                        <!--<button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>-->
                         </div>
                         </h5>
                         </div>
@@ -523,70 +587,6 @@
                         </div>
                         </div>
 
-                        <div class="container ret">
-                            <h5 class="h5tope sinreportar"><i class="fas fa-circle"></i> Sin Reportar <strong style="font-weight: 600;">(Sólo Planificados)</strong></h5>
-                        <div id="accordion">
-                        <div class="card">
-                        <div class="card-header" id="heading10">
-                        <h5 class="mb-0">
-
-                            <button class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
-                                VICTOR HUGO MATEO MONTALVO
-                            </button>
-
-                        <div class="contiene-acciones-med">
-                        <button type="button" class="btn acciones-medicos confirmasobrereporte"><i class="fas fa-check"></i></button>
-                        <button type="button" class="btn acciones-medicos puzz" data-toggle="modal" data-target="#exampleModalLongRegistro"><i class="fas fa-puzzle-piece"></i></button>
-                        <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
-                        </div>
-                        </h5>
-                        </div>
-                        </div>
-                        <div class="card">
-                        <div class="card-header" id="heading11">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
-                            RODOLFO SUAREZ GUTIERREZ
-                        </button>
-                        <div class="contiene-acciones-med">
-                        <button type="button" class="btn acciones-medicos"><i class="fas fa-check"></i></button>
-                        <button type="button" class="btn acciones-medicos puzz" data-toggle="modal" data-target="#exampleModalLongRegistro"><i class="fas fa-puzzle-piece"></i></button>
-                        <button type="button" class="btn acciones-medicos eliminareporte"><i class="far fa-trash-alt"></i></button>
-                        </div>
-                        </h5>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-
-                    <!--<div class="container ret">
-                        <h5 class="h5tope adicionales"><i class="fas fa-circle"></i> Visitas Adicionales</h5>
-                        <div id="accordion">
-                        <div class="card" style="margin-bottom: 25px;">
-                            <div class="card-header" id="heading12">
-
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseThree">
-                                Médico 27
-                                </button>
-                                <div class="contiene-acciones-med">
-                                <button type="button" class="btn acciones-medicos"><i class="fas fa-check"></i></button>
-                                <button type="button" class="btn acciones-medicos"><i class="fas fa-puzzle-piece"></i></button>
-                                <button type="button" class="btn acciones-medicos"><i class="far fa-trash-alt"></i></button>
-                                </div>
-                            </h5>
-
-                            </div>
-                            <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>-->
-
-            <!--COMENTARIOS ADICIONALES-->
-        
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-            </div>
         </div>
         </div>
     </div>
@@ -614,26 +614,49 @@
                         </button>
                     </div>
             <div class="modal-body contiene-visita-u">
-                <div class="visita-u">
-                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
-                <br>
-                <h5>Observaciones de la última fecha:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
-                </div>
-                <hr>  
-                <div class="visita-u">
-                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
-                <br>
-                <h5>Observaciones de la última fecha:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
-                </div>
-                <hr>  
-                <div class="visita-u">
-                <h5>Última Visita: <span class="fecha-u-aviso">01/11/2018 6:00 p.m.</span></h5>
-                <br>
-                <h5>Observaciones de la última fecha:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque, dolor culpa cumque, laboriosam nam accusamus voluptates earum ipsum voluptatem illum sint odio.</p>
-                </div>      
+                <div class="container">
+                    <div class="card">
+                      <div class="card-body">
+                        <img src="assets/images/user-4.jpg" class="float-left rounded-circle" style="max-width: 62px;">
+                        <div class="message">
+                          <h5 class="card-title">Representante: <span>Eduardo Ernesto Farfan Trelles</span></h5>
+                          <h6 class="card-subtitle mb-2">Fecha: <span>03/11/2018</span></h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="actions">
+                          <a href="#" class="card-link">Ver más</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="assets/images/user-4.jpg" class="float-left rounded-circle" style="max-width: 62px;">
+                            <div class="message">
+                              <h5 class="card-title">Representante: <span>Eduardo Ernesto Farfan Trelles</span></h5>
+                              <h6 class="card-subtitle mb-2">Fecha: <span>15/10/2018</span></h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="actions">
+                              <a href="#" class="card-link">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="assets/images/user-4.jpg" class="float-left rounded-circle" style="max-width: 62px;">
+                            <div class="message">
+                              <h5 class="card-title">Representante: <span>Eduardo Ernesto Farfan Trelles</span></h5>
+                              <h6 class="card-subtitle mb-2">Fecha: <span>10/10/2018</span></h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="actions">
+                              <a href="#" class="card-link">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                  </div>     
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
@@ -740,7 +763,7 @@
                             
     <!--DATEPICKER-->
     <div class="datos-picker">
-        <input class="datepicker" width="150" />
+        <!--<input class="datepicker" width="150" />-->
         <input class="timepicker" width="130" />
     </div>
 
@@ -755,15 +778,15 @@
 <tr>
 <th scope="col">M. Médica</th>
 <th scope="col">Disponible</th>
-<th scope="col">Restante</th>
-<th scope="col" style="min-width: 100px;">Entrega</th>
+<th scope="col">A Entregar</th>
+<th scope="col" style="min-width: 100px;">Se Entrega</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">OPTIVE 3ML (MM)</th>
 <td>10</td>
-<td>9</td>
+<td style="color: red;">3</td>
 <td>
 <div class="input-group top-group">
 <span class="input-group-btn">
@@ -771,7 +794,7 @@
     <span class="fas fa-minus"></span>
 </button>
 </span>
-<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+<input style="box-shadow: none;" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
 <span class="input-group-btn">
 <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
     <span class="fas fa-plus"></span>
@@ -784,7 +807,7 @@
 <tr>
 <th scope="row">COMBIGAN 2,5ML (MM)</th>
 <td>15</td>
-<td>14</td>
+<td style="color: red;">4</td>
 <td>
 <div class="input-group top-group">
 <span class="input-group-btn">
@@ -792,7 +815,7 @@
         <span class="fas fa-minus"></span>
     </button>
 </span>
-<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+<input style="box-shadow: none;" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
 <span class="input-group-btn">
     <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
         <span class="fas fa-plus"></span>
@@ -805,7 +828,7 @@
 <tr>
 <th scope="row">OPTIVE 3ML (MM)</th>
 <td>5</td>
-<td>4</td>
+<td style="color: red;">2</td>
 <td>
 <div class="input-group top-group">
 
@@ -817,7 +840,7 @@
 
 </span>
 
-<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+<input style="box-shadow: none;" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
 
 <span class="input-group-btn">
 
@@ -874,6 +897,29 @@
     </label>
 </div>
 </div>
+
+<hr>
+<div class="" style="display: inline-block;
+width: 57%;">
+<h5 style="margin-top: 30px;font-size: 16px;">Acompañantes:</h5>
+<!--MALLA PROMOCIONAL-->
+
+<div class="form-check col-6" style="display: inline-block;">
+    <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Supervisor
+    </label>
+</div>
+<div class="form-check col-6" style="display: inline-block;">
+    <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Entrenador
+    </label>
+</div>
+<div class="form-check col-6" style="display: inline-block;">
+    <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Jefe de Linea
+    </label>
+</div>
+            </div>
 
 <div class="conteo-pacientes">
 
@@ -974,6 +1020,47 @@
                   </div>
                 </div>
               </div>
+
+              <div class="modal fade" id="exampleModalconfirmamed" tabindex="-1" role="dialog" aria-labelledby="exampleModalconfirmamedLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+
+                            <h5 style="font-size: 15px;margin-bottom: 22px;">Selecciona la Fecha y Hora de la visita que deseas clonar:</h5>
+                            
+                            <!--DATEPICKER-->
+                            <div class="datos-picker" style="max-width: 290px;margin: auto;">
+                                    <input class="datepicker" width="150" />
+                                    <input class="timepicker" width="130" />
+                                </div>
+
+                            <button class="btn btn-info" style="margin-top: 20px;">Clonar</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
 
     <script>
         $('.datepicker').datepicker({
