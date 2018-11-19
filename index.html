@@ -258,7 +258,7 @@
                                         <div class="card-body b-l calender-sidebar">
 
                                                 <div class="indicadores-pordia" style="max-width: 164px;">
-                                                    <h5>Indicadores del Ciclo: </h5>
+                                                    <h5>Total de planificadas: </h5>
                                                     <span style="background-color: #ffc107;" class="" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Visitas Registradas" style="cursor: pointer;">4</span>
                                                 </div>
                                                 <!--<span class="indicador-a" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ciclo Actual con Visitas No Programadas." style="cursor: pointer;">10</span>-->
@@ -360,7 +360,7 @@
                             <h5 class="modal-title" id="exampleModalLabelCAMBIO">Miércoles 21, Noviembre del 2018</h5>
                     </div>
                     
-                    <button class="btn btn-info" data-toggle="modal" data-target="#exampleModalconfirma" id="clonar-planificacion"><i class="fas fa-copy"></i>  Clonar Planificación</button>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#exampleModalconfirma" id="clonar-planificacion" disabled data-toggle="popover" data-content="Para clonar de forma múltiple se necesita mínimo seleccionar una Visita."><i class="fas fa-copy"></i>  Clonar Planificación</button>
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -483,7 +483,7 @@
                                             
                                     <h5 class="mb-0">
                                             <span class="custom-checkbox">
-                                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                                    <input type="checkbox" id="checkbox1" name="options[]" value="1" class="inputcheckbox-clonar">
                                                     <label for="checkbox1"></label>
                                                 </span>
                                         <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
@@ -504,7 +504,7 @@
                                     <div class="card-header" id="heading11">
                                     <h5 class="mb-0">
                                             <span class="custom-checkbox">
-                                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                                    <input type="checkbox" id="checkbox2" name="options[]" value="1" class="inputcheckbox-clonar">
                                                     <label for="checkbox2"></label>
                                                 </span>
                                     <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro">
@@ -521,8 +521,9 @@
                                     </div>
 
                                     <div class="modal-footer">
-                                            <button style="background-color: #dc3545bd;border-color: #dc3545bd;" type="button" class="btn btn-primary" data-dismiss="modal">Registrar Visitas</button>
-                                        </div>
+                                        <button id="registrar-visitasplanificadas" style="background-color: #dc3545bd;border-color: #dc3545bd;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#m-pa11">Registrar Visitas</button>
+                                    </div>
+
                                     </div>
                                     </div>
 
@@ -534,7 +535,7 @@
                         <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                                 <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                        <input type="checkbox" id="checkbox3" name="options[]" value="1" class="inputcheckbox-clonar">
                                         <label for="checkbox3"></label>
                                     </span>
                         <button style="color: #496f98;" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
@@ -552,7 +553,7 @@
                         <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
                                 <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                        <input type="checkbox" id="checkbox4" name="options[]" value="1" class="inputcheckbox-clonar">
                                         <label for="checkbox4"></label>
                                     </span>
                         <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
@@ -570,7 +571,7 @@
                         <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                                 <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                        <input type="checkbox" id="checkbox5" name="options[]" value="1" class="inputcheckbox-clonar">
                                         <label for="checkbox5"></label>
                                     </span>
                         <button style="color: #496f98;" class="btn btn-link collapsed" data-toggle="modal" data-target="#exampleModalLongRegistro2" data-whatever="@getbootstrap">
@@ -1055,9 +1056,345 @@ width: 57%;">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
+
+                                    <section class="content tablahistorico">
+                                            <div class="col-6 porinstitu2">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="">
+                                                            <div class="btn-group" style="width: 100%;display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;">
+
+                                                                    <input class="busqueda-inst-med" style="border: 1px solid #afafaf;padding: 8px;color: #565656;background-image: url('assets/images/search.png');background-repeat: no-repeat;background-position: right;background-size: 25px;margin-top: 10px; width: 78%;" type="text" name="Buscar.." placeholder="Buscar por médico..">
+                                                                
+                                                                
+                                                                    <div style="text-align: center;margin-top: 10px;">
+                                                                            <button type="button" class="btn btn-default btn-primary" data-target="all2">Todos</button>
+                                                                        <button type="button" class="btn btn-success btn-filter" data-target="pagado">Reportado</button>
+                                                                        <!--<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>-->
+                                                                        <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Sin Reportar</button>
+                                                                    </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-container">
+                                                            <table class="table table-filter">
+                                                                <tbody>
+                                                                    <tr data-status="pagado">
+                                                                        <td class="fecha-histo">
+                                                                            <div class="ckbox">
+                                                                                <span class="span1-histo">Oct</span><span class="span2-histo">15</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="star">
+                                                                                <i class="fas fa-bell"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="media">
+                                                                                <a href="#" class="pull-left">
+                                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                                </a>
+                                                                                <div class="media-body">
+                                                                                    
+                                                                                    <h4 class="title">
+                                                                                        NORA ALVARADO
+                                                                                    </h4>
+                                                                                    <p class="summary">POLIC. SAN JOSE OBRERO</p>
+                                                                                    <p class="summary2">09:25 a.m.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-status="pagado">
+                                                                            <td class="fecha-histo">
+                                                                                    <div class="ckbox">
+                                                                                        <span class="span1-histo">Oct</span><span class="span2-histo">23</span>
+                                                                                    </div>
+                                                                                </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="star">
+                                                                                <i class="fas fa-bell"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="media">
+                                                                                <a href="#" class="pull-left">
+                                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                                </a>
+                                                                                <div class="media-body">
+                                                                                    
+                                                                                    <h4 class="title">
+                                                                                        JEAN CRIADO
+                                                                                    </h4>
+                                                                                    <p class="summary">POLIC. SAN JOSE OBRERO</p>
+                                                                                    <p class="summary2">11:20 a.m.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-status="cancelado">
+                                                                            <td class="fecha-histo">
+                                                                                    <div class="ckbox">
+                                                                                        <span class="span1-histo">Nov</span><span class="span2-histo">01</span>
+                                                                                    </div>
+                                                                                </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="star">
+                                                                                <i class="fas fa-bell"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="media">
+                                                                                <a href="#" class="pull-left">
+                                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                                </a>
+                                                                                <div class="media-body">
+                                                                                    
+                                                                                    <h4 class="title">
+                                                                                        RODOLFO SUAREZ
+                                                                                    </h4>
+                                                                                    <p class="summary">HOSPITAL SOLIDARIDAD SJM</p>
+                                                                                    <p class="summary2">03:00 p.m.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-status="pagado" class="selected">
+                                                                            <td class="fecha-histo">
+                                                                                    <div class="ckbox">
+                                                                                        <span class="span1-histo">Nov</span><span class="span2-histo">07</span>
+                                                                                    </div>
+                                                                                </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="star star-checked">
+                                                                                <i class="fas fa-bell"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="media">
+
+                                                                                <a href="#" class="pull-left">
+                                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                                </a>
+
+                                                                                <div class="media-body">
+                                                                                    
+                                                                                    <h4 class="title">
+                                                                                        VICTOR MATEO
+                                                                                    </h4>
+                                                                                    <p class="summary">CLÍNICA VIRGEN DEL ROSARIO</p>
+                                                                                    <p class="summary2">05:35 p.m.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-status="cancelado">
+                                                                            <td class="fecha-histo">
+                                                                                    <div class="ckbox">
+                                                                                        <span class="span1-histo">Nov</span><span class="span2-histo">19</span>
+                                                                                    </div>
+                                                                                </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="star">
+                                                                                <i class="fas fa-bell"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="media">
+                                                                                <a href="#" class="pull-left">
+                                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                                </a>
+                                                                                <div class="media-body">
+                                                                                    
+                                                                                    <h4 class="title">
+                                                                                        ELSA ZEGARRA
+                                                                                    </h4>
+                                                                                    <p class="summary">HOSPITAL GERIATRICO MILITAR</p>
+                                                                                    <p class="summary2">05:35 p.m.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6 porinstitu">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <div class="">
+
+                                                                <div class="btn-group" style="width: 100%;display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;">
+    
+                                                                        <input class="busqueda-inst-med" style="border: 1px solid #afafaf;padding: 8px;color: #565656;background-image: url('assets/images/search.png');background-repeat: no-repeat;background-position: right;background-size: 25px;margin-top: 10px; width: 78%;" type="text" name="Buscar.." placeholder="Buscar por institución..">
+                                                                                
+                                                                        <div style="text-align: center;margin-top: 10px;">
+                                                                            <button type="button" class="btn btn-default btn-primary" data-target="all">Todos</button>
+                                                                            <button type="button" class="btn btn-success btn-filter" data-target="pagado">Completo</button>
+                                                                            <button type="button" class="btn btn-warning btn-filter" data-target="cancelado">Incompleto</button>
+                                                                        </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="table-container">
+                                                                <table class="table table-filter">
+                                                                    <tbody>
+                                                                        <tr data-status="pagado">
+                                                                            <td class="fecha-histo">
+                                                                                <div class="ckbox">
+                                                                                    <span class="span1-histo">Nov</span><span class="span2-histo">03</span>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href="javascript:;" class="star">
+                                                                                    <i class="fas fa-bell"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="media">
+                                                                                    <a href="#" class="pull-left">
+                                                                                        <img src="assets/images/intitu-medg.png" class="media-photo">
+                                                                                    </a>
+                                                                                    <div class="media-body">
+                                                                                        
+                                                                                        <h4 class="title">
+                                                                                                POLIC. SAN JOSE OBRERO
+                                                                                        </h4>
+                                                                                        <p class="summary">Jirón Tiravanti 255</p>
+                                                                                        <br>
+                                                                                        <p class="summary" style="color: #28a745;font-weight: 600;">7/7</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr data-status="cancelado">
+                                                                                <td class="fecha-histo">
+                                                                                        <div class="ckbox">
+                                                                                            <span class="span1-histo">Nov</span><span class="span2-histo">09</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                            <td>
+                                                                                <a href="javascript:;" class="star">
+                                                                                    <i class="fas fa-bell"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="media">
+                                                                                    <a href="#" class="pull-left">
+                                                                                        <img src="assets/images/intitu-medg.png" class="media-photo">
+                                                                                    </a>
+                                                                                    <div class="media-body">
+                                                                                        
+                                                                                        <h4 class="title">
+                                                                                                HOSPITAL GERIATRICO MILITAR
+                                                                                        </h4>
+                                                                                        <p class="summary">Av San Juan 745</p>
+                                                                                            <br>
+                                                                                            
+                                                                                            <p class="summary" style="color: #ff9c07;font-weight: 600;">4/7</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr data-status="pagado">
+                                                                                <td class="fecha-histo">
+                                                                                        <div class="ckbox">
+                                                                                            <span class="span1-histo">Nov</span><span class="span2-histo">11</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                            <td>
+                                                                                <a href="javascript:;" class="star">
+                                                                                    <i class="fas fa-bell"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="media">
+                                                                                    <a href="#" class="pull-left">
+                                                                                        <img src="assets/images/intitu-medg.png" class="media-photo">
+                                                                                    </a>
+                                                                                    <div class="media-body">
+                                                                                        
+                                                                                            <h4 class="title">
+                                                                                                    POLIC. SAN JOSE OBRERO
+                                                                                            </h4>
+                                                                                            <p class="summary">Jirón Tiravanti 255</p>
+                                                                                            <br>
+                                                                                            <p class="summary" style="color: #28a745;font-weight: 600;">5/5</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr data-status="pagado" class="selected">
+                                                                                <td class="fecha-histo">
+                                                                                        <div class="ckbox">
+                                                                                            <span class="span1-histo">Nov</span><span class="span2-histo">17</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                            <td>
+                                                                                <a href="javascript:;" class="star star-checked">
+                                                                                    <i class="fas fa-bell"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="media">
+    
+                                                                                    <a href="#" class="pull-left">
+                                                                                        <img src="assets/images/intitu-medg.png" class="media-photo">
+                                                                                    </a>
+    
+                                                                                    <div class="media-body">
+                                                                                        
+                                                                                        <h4 class="title">
+                                                                                                POLICLINICO EL PALMAR LO TILOS
+                                                                                        </h4>
+                                                                                        <p class="summary">Jirón Tiravanti 255</p>
+                                                                                            <br>
+                                                                                            <p class="summary" style="color: #28a745;font-weight: 600;">10/10</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr data-status="cancelado">
+                                                                                <td class="fecha-histo">
+                                                                                        <div class="ckbox">
+                                                                                            <span class="span1-histo">Nov</span><span class="span2-histo">27</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                            <td>
+                                                                                <a href="javascript:;" class="star">
+                                                                                    <i class="fas fa-bell"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="media">
+                                                                                    <a href="#" class="pull-left">
+                                                                                        <img src="assets/images/intitu-medg.png" class="media-photo">
+                                                                                    </a>
+                                                                                    <div class="media-body">
+                                                                                        
+                                                                                            <h4 class="title">
+                                                                                                    HOSPITAL SOLIDARIDAD SJM
+                                                                                            </h4>
+                                                                                            <p class="summary">Av San Juan 745</p>
+                                                                                            <br>
+                                                                                            
+                                                                                            <p class="summary" style="color: #ff9c07;font-weight: 600;">7/11</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </section>
                             </div>
                         </div>
                     </div>
@@ -1110,11 +1447,13 @@ width: 57%;">
 
         $(function () {
             $('.acciones-medicos').popover({
+                trigger: 'focus',
             container: 'body'
             })
         })
 
         $('.relativo-c1 .infomed').popover({
+            trigger: 'focus',
         placement : 'top',
         html : true,
         title : 'Información de Médico',
@@ -1122,6 +1461,7 @@ width: 57%;">
         });
 
         $('.relativo-c2 .infomed').popover({
+            trigger: 'focus',
         placement : 'top',
         html : true,
         title : 'Información de Médico',
@@ -1129,18 +1469,21 @@ width: 57%;">
         });
 
         $('.vermapa').popover({
+            trigger: 'focus',
         placement : 'top',
         html : true,
         content : '<h5>Institución 1</h5><p>Av.Grau 800, La Victoria <br><span style="display: inline-block;width: 100%; text-align: right;"><button style="color: red;font-size: 13px; margin-bottom: -15px;" type="button" class="btn acciones-medicos-c" data-toggle="modal" data-target="#exampleModalMAPS">Ver mapa <i class="fas fa-map-marker-alt"></i></button></span></p>'
         });
-
+/*
         $('.confirmasobrereporte').popover({
+            trigger: 'focus',
         placement : 'top',
         html : true,
         content : '<h5>¿Reportar?</h5> <button data-toggle="modal" data-target="#m-pa11" class="btn btn-success sipasar" style="width: 50px;">SI</button> <button class="btn btn-danger" style="width: 50px;">NO</button>'
-        });
+        });*/
 
         $('.eliminareporte').popover({
+            trigger: 'focus',
         placement : 'top',
         html : true,
         content : '<h5>¿Eliminar?</h5> <button data-toggle="modal" data-target="#m-pa22" class="btn btn-success sielimina" style="width: 50px;">SI</button> <button class="btn btn-danger" style="width: 50px;">NO</button>'
@@ -1149,7 +1492,6 @@ width: 57%;">
     </script>
 
     <script src="assets/js/seleccion-medicos.js"></script>
-
 </body>
 
 </html>

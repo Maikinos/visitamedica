@@ -265,7 +265,7 @@ $('.fc-event-container').on('click', function(){
 
     if (siinst || siinstd) {
         $('#botonm1').click();
-        $('#clonar-planificacion').hide();
+        $('#clonar-planificacion').show();
         $('.rplani').show();
         $('.aplani').hide();
         $('#exampleModalLabel').show();
@@ -325,3 +325,66 @@ $('.fc-event-container').on('click', function(){
 
   });
   
+
+    $(".inputcheckbox-clonar").on( 'change', function() {
+
+        var produceinputs = $('.inputcheckbox-clonar:checked').length;
+
+
+        if( produceinputs > 0) {
+            $('#clonar-planificacion').removeAttr('disabled');
+            $('#clonar-planificacion').popover('hide');
+            $('#registrar-visitasplanificadas').addClass('cambiocolor-activo');
+        }else {
+            // Hacer algo si el checkbox ha sido deseleccionado
+            $('#clonar-planificacion').attr('disabled', true);
+            $('#clonar-planificacion').popover('show');
+
+            setInterval(function(){ 
+                $('#clonar-planificacion').popover('hide');
+            }, 2500);
+
+            $('#registrar-visitasplanificadas').removeClass('cambiocolor-activo');
+        }
+    });
+
+
+
+    $('.star').on('click', function () {
+        $(this).toggleClass('star-checked');
+      });
+  
+      $('.ckbox label').on('click', function () {
+        $(this).parents('tr').toggleClass('selected');
+      });
+
+      $('.porinstitu .btn-filter').on('click', function () {
+        var $target = $(this).data('target');
+        if ($target != 'all') {
+          $('.porinstitu .table tr').css('display', 'none');
+          $('.porinstitu .table tr[data-status="' + $target + '"]').fadeIn('slow');
+        } else {
+          $('.porinstitu .table-filter tr').css('display', 'block').fadeIn('slow');
+
+        }
+      });
+
+      $('.porinstitu2 button[data-target="all2"]').on('click', function () {
+        $('.porinstitu2 .table-filter tr').css('display', 'block').fadeIn('slow');
+      });
+
+      $('.porinstitu2 .btn-filter').on('click', function () {
+        var $target = $(this).data('target');
+        if ($target != 'all2') {
+          $('.porinstitu2 .table tr').css('display', 'none');
+          $('.porinstitu2 .table tr[data-status="' + $target + '"]').fadeIn('slow');
+        } else {
+          $('.porinstitu2 .table-filter tr').css('display', 'block').fadeIn('slow');
+
+        }
+      });
+
+      $('.porinstitu2 button[data-target="all2"]').on('click', function () {
+        $('.porinstitu2 .table-filter tr').css('display', 'block').fadeIn('slow');
+      });
+      

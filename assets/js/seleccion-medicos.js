@@ -13,6 +13,7 @@ var oData = {cars : [
       {brand: "CLÍNICA VIRGEN DEL ROSARIO", model: "NER", medico: "ELSA ZEGARRA OSORIO"},
       {brand: "HOSPITAL GERIATRICO MILITAR", model: "GER", medico: "MIGUEL ANGEL PACCO HUARAHUARA"}
    ],
+
    brands: [
       {name : "CLÍNICA VIRGEN DEL ROSARIO", key: "1"},
       {name : "POLICLINICO EL PALMAR LO TILOS 108-201", key: "2"},
@@ -21,12 +22,14 @@ var oData = {cars : [
       {name : "CLÍNICA VIRGEN DEL ROSARIO", key: "5"},
       {name : "HOSPITAL GERIATRICO MILITAR", key: "6"}
    ],
+
    models: [
       {name : "MG", key: "1"},
       {name : "TRA", key: "2"},
       {name : "NER", key: "3"},
       {name : "GER", key: "4"}
    ],
+
    medicos: [
       {name : "NORA ALVARADO PORTALINO", key: "1"},
       {name : "DEMETRIO CARLOS ANCHANTE ANYARIN", key: "2"},
@@ -37,9 +40,6 @@ var oData = {cars : [
       {name : "MIGUEL ANGEL PACCO HUARAHUARA", key: "7"}
    ]                 
 };
-
-
-
 
 
 function calcFilter(oEvent, sFilterAtt, oFFL1, sFilterAtt1, oFFL2, sFilterAtt2) {

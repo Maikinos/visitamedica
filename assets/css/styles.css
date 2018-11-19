@@ -1012,9 +1012,224 @@ h5.mb-0 button {
     .historico{
         float: left;
         border: 0;
-        background-color: purple;
+        background-color: #af25af;
         font-size: 18px;
         color: white;
         border-radius: 5px;
         cursor: pointer;
     }
+
+/*
+    #clonar-planificacion:after{
+        content: 'Para clonar de forma múltiple se necesita mínimo seleccionar una Visita.';
+
+    }*/
+
+
+    /*TABLA DE HISTORICO*/
+
+    .tablahistorico .panel {
+        border: 1px solid #ddd;
+        background-color: #fcfcfc;
+    }
+    .tablahistorico .panel .btn-group {
+        margin: 15px 0 30px;
+    }
+    .tablahistorico .panel .btn-group .btn {
+        transition: background-color .3s ease;
+    }
+     .table-filter {
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+     .table-filter tbody tr:hover {
+        cursor: pointer;
+        background-color: #eee;
+    }
+     .table-filter tbody tr td {
+        padding: 10px;
+        vertical-align: middle;
+        border-top-color: #eee;
+    }
+     .table-filter tbody tr.selected td {
+        background-color: #eee;
+    }
+     .table-filter tr td:first-child {
+        width: 38px;
+    }
+     .table-filter tr td:nth-child(2) {
+        width: 35px;
+    }
+     .ckbox {
+        position: relative;
+    }
+     .ckbox input[type="checkbox"] {
+        opacity: 0;
+    }
+     .ckbox label {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+     .ckbox label:before {
+        content: '';
+        top: 1px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: absolute;
+        border-radius: 2px;
+        border: 1px solid #bbb;
+        background-color: #fff;
+    }
+     .ckbox input[type="checkbox"]:checked + label:before {
+        border-color: #2BBCDE;
+        background-color: #2BBCDE;
+    }
+     .ckbox input[type="checkbox"]:checked + label:after {
+        top: 3px;
+        left: 3.5px;
+        content: '\e013';
+        color: #fff;
+        font-size: 11px;
+        font-family: 'Glyphicons Halflings';
+        position: absolute;
+    }
+     .table-filter .star {
+        color: #ccc;
+        text-align: center;
+        display: block;
+    }
+     .table-filter .star.star-checked {
+        color: #F0AD4E;
+    }
+     .table-filter .star:hover {
+        color: #ccc;
+    }
+     .table-filter .star.star-checked:hover {
+        color: #F0AD4E;
+    }
+     .table-filter .media-photo {
+        width: 35px;
+    }
+     .table-filter .media-body {
+        display: block;
+        /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
+    }
+     .table-filter .media-meta {
+        font-size: 11px;
+        color: #999;
+    }
+     .table-filter .media .title {
+        color: #2BBCDE;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: normal;
+        margin: 0;
+    }
+     .table-filter .media .title span {
+        font-size: .8em;
+        margin-right: 20px;
+    }
+     .table-filter .media .title span.pagado {
+        color: #5cb85c;
+    }
+     .table-filter .media .title span.pendiente {
+        color: #f0ad4e;
+    }
+     .table-filter .media .title span.cancelado {
+        color: #d9534f;
+    }
+     .table-filter .media .summary {
+        font-size: 14px;
+    }
+
+
+
+    @media(max-width: 990px){
+    .busqueda-inst-med{
+        width: 75%;
+    }
+}
+
+.fecha-histo{
+    width: 80px;
+}
+
+.fecha-histo .ckbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 4px solid;
+    padding-right: 8px;
+}
+
+.span1-histo{
+    font-size: 11px;
+    text-align: right;
+}
+
+.span2-histo{
+    font-size: 30px;
+    margin-top: -11px;
+}
+
+.media * {
+    display: inline-flex;
+    height: 100%;
+    margin: auto;
+}
+
+.porinstitu2 tr[data-status="pagado"] .media a{
+    border: 5px solid #28a745;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu2 tr[data-status="cancelado"] .media a{
+    border: 5px solid #dc3545;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu tr[data-status="pagado"] .media a{
+    border: 5px solid #28a745;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu tr[data-status="cancelado"] .media a{
+    border: 5px solid #ff9c07;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.cambiocolor-activo{
+    background-color: #e52929 !important;
+    border-color: #e52929 !important;
+}
+
+.tablahistorico div.col-6{
+    display: inline-block;
+    float: left;
+}
+
+tr[data-status="pagado"] .star{
+    display: none !important;
+}
+
+.summary{
+    font-size: 13px !important;
+}
+
+.summary2{
+    font-size: 11px;
+    font-weight: 700;
+}
