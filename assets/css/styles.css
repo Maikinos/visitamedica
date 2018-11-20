@@ -1233,3 +1233,44 @@ tr[data-status="pagado"] .star{
     font-size: 11px;
     font-weight: 700;
 }
+
+@media(max-width: 990px){
+    .porinstitu2{
+        max-width: 100%;
+    }
+
+    .porinstitu{
+        max-width: 100%;
+    }
+}
+
+.marcadoproceso {
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.marcadoproceso .horademarcado {
+    box-sizing: border-box;
+    border: 1px solid #ffc107;
+    padding: 0 4px;
+    border-radius: 6px;
+    color: #ffc107;
+}
+
+.marcadoproceso .nombremed-marcado{
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+.marcadoproceso .realizadovisita-marcado{
+    color: green;
+}
+
+.tooltip .tooltip-inner{
+    max-width: inherit !important;
+    text-align: left !important;
+}
+
+.marcadoproceso .realizadovisita-nomarcado{
+    color: #ffc107;
+}
