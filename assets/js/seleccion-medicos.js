@@ -4,7 +4,9 @@ var aFilters3 = [];
 
 var prevFilter1, prevFilter2, prevFilter3;
    
-var oData = {cars : [
+var oData = {
+   
+   cars : [
       {brand: "POLICLINICO SAN JOSE OBRERO", model: "MG", medico: "NORA ALVARADO PORTALINO"},
       {brand: "POLICLINICO EL PALMAR LO TILOS 108-201", model: "MG", medico: "DEMETRIO CARLOS ANCHANTE ANYARIN"},
       {brand: "POLICLINICO SAN JOSE OBRERO", model: "TRA", medico: "JEAN CARLOS CRIADO HUERTO"},
