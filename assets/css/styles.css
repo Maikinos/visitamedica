@@ -357,7 +357,7 @@ h5.mb-0 button {
 
     /**/
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) and (orientation: landscape){
         #main-wrapper {
             margin-top: 0;
         }
@@ -1148,7 +1148,7 @@ h5.mb-0 button {
 
 
 
-    @media(max-width: 990px){
+    @media(max-width: 1024px){
     .busqueda-inst-med{
         width: 75%;
         display: none;
