@@ -362,9 +362,11 @@ h5.mb-0 button {
 
         body{
         }
-        #main-wrapper {
 
+        #main-wrapper {
+            margin-top: 140px;
         }
+
         .col-lg-9 {
             -webkit-box-flex: 0;
             -ms-flex: 0 0 100%;
