@@ -378,9 +378,6 @@ h5.mb-0 button {
 
     @media (max-width: 1140px){
 
-        .left-sidebar{
-            display: none;
-        }
 
         body{
         }
@@ -1354,4 +1351,8 @@ tr[data-status="pagado"] .star{
 
 .marcadoproceso .realizadovisita-nomarcado{
     color: #ffc107;
+}
+
+.page-wrapper{
+    margin-top: 100px;
 }
