@@ -357,7 +357,7 @@ h5.mb-0 button {
 
     /**/
 
-    @media (max-width: 540px){
+    @media (max-width: 1140px){
         #main-wrapper {
             margin-top: 0;
         }
