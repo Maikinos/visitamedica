@@ -361,7 +361,6 @@ h5.mb-0 button {
 
 
         body{
-            padding-top: 150px;
         }
         #main-wrapper {
 
@@ -420,7 +419,7 @@ h5.mb-0 button {
             display: block !important;
             position: absolute;
             left: -47px;
-            top: 0;
+            top: 42px;
             padding: 5px 10px;
             font-size: 27px;
             -webkit-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
