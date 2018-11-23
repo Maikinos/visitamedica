@@ -73,7 +73,7 @@ button.bs-placeholder:hover{
     margin-top: 20px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     .tab-button-outer {
       position: relative;
       z-index: 2;
@@ -140,7 +140,8 @@ h5.mb-0 button {
     height: 35px;
     font-size: 16px;
     padding: 0px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .contiene-acciones-med{
@@ -158,9 +159,14 @@ h5.mb-0 button {
     overflow: hidden;
     width: 95%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     margin-top: 5px;
 }
 
@@ -258,9 +264,14 @@ h5.mb-0 button {
 
     /*indicadores*/
     .indicadores-pordia {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         float: left;
         width: 210px;
         margin-top: -2px;
@@ -284,10 +295,16 @@ h5.mb-0 button {
         font-size: 11px;
         font-weight: 600;
         text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         /* align-items: center; */
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .indicador-r{
@@ -315,7 +332,9 @@ h5.mb-0 button {
     }
 
     #alerta-indicadores-ciclo:hover{
-        transform: scale(1.1)
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1)
     }
 
     #alerta-indicadores-ciclo img{
@@ -357,9 +376,21 @@ h5.mb-0 button {
 
     /**/
 
-    @media (max-width: 1024px){
+    @media (max-width: 1140px){
+
+
+        body{
+        }
+
         #main-wrapper {
-            margin-top: 0;
+            margin-top: 50px;
+        }
+
+        .col-lg-9 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
         }
 
         .panel-filtros-c {
@@ -371,9 +402,10 @@ h5.mb-0 button {
             background-color: white;
             /* border: 1px solid; */
             width: 205px;
+            -webkit-transition: all ease 250ms;
+            -o-transition: all ease 250ms;
             transition: all ease 250ms;
             -webkit-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
-            -moz-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
             box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
         }
 
@@ -409,11 +441,10 @@ h5.mb-0 button {
             display: block !important;
             position: absolute;
             left: -47px;
-            top: 0;
+            top: 42px;
             padding: 5px 10px;
             font-size: 27px;
             -webkit-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
-            -moz-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
             box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
             background-color: #dc3545;
             color: white;
@@ -587,6 +618,8 @@ h5.mb-0 button {
     .calendario-dinam {
         min-width: 200px;
         height: 42px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-bottom: 10px;
         width: 100%;
@@ -599,7 +632,8 @@ h5.mb-0 button {
     .calendario-dinam input {
         padding: 0;
         margin: 0;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         min-width: 110px;
         text-align: center;
         font-size: 14px;
@@ -612,10 +646,13 @@ h5.mb-0 button {
         background-color: #dddddd;
         font-size: 20px;
         cursor: pointer;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     #Turno{
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         vertical-align: middle;
         text-align: center;
@@ -628,7 +665,8 @@ h5.mb-0 button {
 
     #datetimepicker1 * {
         text-shadow: none;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     hr{
@@ -694,15 +732,22 @@ h5.mb-0 button {
 
     .gj-picker .modal-footer button:last-child {
         background: #dc3545 !important;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         color: white;
         margin-top: 3px;
     }
 
     .datos-picker{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     }
 
     .datos-picker .gj-datepicker{
@@ -715,14 +760,16 @@ h5.mb-0 button {
         font-size: 13px;
         padding: 0;
         text-align: center;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     .datos-picker .gj-datepicker span button{
         padding: 0px;
         text-align: center;
         /* padding-left: 2px; */
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         color: #212529 !important;
         background-color: #dee2e6!important;
         border-color: #dee2e6!important;
@@ -744,14 +791,16 @@ h5.mb-0 button {
         font-size: 13px;
         padding: 0;
         text-align: center;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     .datos-picker .gj-timepicker span button {
         padding: 0px;
         text-align: center;
         /* padding-left: 2px; */
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         color: #212529 !important;
         background-color: #dee2e6!important;
         border-color: #dee2e6!important;
@@ -763,6 +812,8 @@ h5.mb-0 button {
 
 
     #exampleModalconfirma .datos-picker{
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 
@@ -782,15 +833,18 @@ h5.mb-0 button {
 
     .btn-link[data-dismiss="modal"] {
         border: 0;
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     .form-check-inline .form-check-input {
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     input[type=checkbox]{
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 
     #exampleModalLongRegistro .form-check-label {
@@ -828,6 +882,8 @@ h5.mb-0 button {
     }
 
     .card.infoderegistrovisita .tt {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         font-size: 15px;
     }
@@ -953,7 +1009,8 @@ h5.mb-0 button {
 		background: white;
 		border: 1px solid #bbb;
 		border-radius: 2px;
-		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
 		z-index: 2;
 	}
 	.custom-checkbox input[type="checkbox"]:checked + label:after {
@@ -967,9 +1024,13 @@ h5.mb-0 button {
 		height: 11px;
 		border: solid #000;
 		border-width: 0 3px 3px 0;
-		transform: inherit;
+		-webkit-transform: inherit;
+		    -ms-transform: inherit;
+		        transform: inherit;
 		z-index: 3;
-		transform: rotateZ(45deg);
+		-webkit-transform: rotateZ(45deg);
+		    -ms-transform: rotate(45deg);
+		        transform: rotateZ(45deg);
 	}
 	.custom-checkbox input[type="checkbox"]:checked + label:before {
 		border-color: #03A9F4;
@@ -983,7 +1044,8 @@ h5.mb-0 button {
 	.custom-checkbox input[type="checkbox"]:disabled + label:before {
 		color: #b8b8b8;
 		cursor: auto;
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 		background: #ddd;
     }
     
@@ -1036,6 +1098,8 @@ h5.mb-0 button {
         margin: 15px 0 30px;
     }
     .tablahistorico .panel .btn-group .btn {
+        -webkit-transition: background-color .3s ease;
+        -o-transition: background-color .3s ease;
         transition: background-color .3s ease;
     }
      .table-filter {
@@ -1148,7 +1212,7 @@ h5.mb-0 button {
 
 
 
-    @media(max-width: 990px){
+    @media(max-width: 1024px){
     .busqueda-inst-med{
         width: 75%;
         display: none;
@@ -1160,10 +1224,19 @@ h5.mb-0 button {
 }
 
 .fecha-histo .ckbox{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-right: 4px solid;
     padding-right: 8px;
 }
@@ -1179,6 +1252,8 @@ h5.mb-0 button {
 }
 
 .media * {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 100%;
     margin: auto;
@@ -1247,11 +1322,13 @@ tr[data-status="pagado"] .star{
 
 .marcadoproceso {
     margin: 4px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .marcadoproceso .horademarcado {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border: 1px solid #ffc107;
     padding: 0 4px;
     border-radius: 6px;
