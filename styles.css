@@ -1,0 +1,1277 @@
+.modal-header{
+    border: 0px;
+}
+
+button.dropdown-toggle::after{
+    font-size: 32px;
+    vertical-align: 0px;
+}
+
+button.btn.dropdown-toggle.btn-light{
+    height: 70px;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+}
+
+button.bs-placeholder:hover{
+    background-color: #f9f9f9;
+}
+
+/*TABS*/
+
+.tabs {
+    margin: 0 auto;
+    padding: 0;
+}
+
+  #tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #tab-button li {
+    display: table-cell;
+    width: 20%;
+  }
+
+  #tab-button li a {
+    display: block;
+    padding: .5em;
+    background: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #tab-button li:not(:first-child) a {
+    border-left: none;
+  }
+
+  #tab-button li a:hover,
+  #tab-button .is-active a {
+    border-bottom-color: transparent;
+    background: #fff;
+  }
+
+  .tab-contents {
+    padding: .5em 2em 1em;
+    border: 1px solid #ddd;
+  }
+  
+  
+  /*
+  .tab-button-outer {
+    display: none;
+  }
+  */
+  .tab-contents {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .tab-button-outer {
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    .tab-select-outer {
+      display: none;
+    }
+
+    .tab-contents {
+      position: relative;
+      top: -1px;
+      margin-top: 0;
+    }
+
+  }
+  /*ACORDEON*/
+  .card-header {
+    background-color: white;
+    padding: 0;
+}
+
+.card {
+    border-radius: 0;
+    margin-bottom: 2px;
+}
+
+.h5tope{
+    font-size: 13px;
+    color: grey;
+    font-weight: 300;
+    margin-top: 18px;
+}
+
+.reportados i{
+    color: #4CAF4E;
+}
+
+.sinreportar i{
+    color: #F44336;
+}
+
+.adicionales i{
+    color: #FFC107;
+}
+
+h5.mb-0 button {
+    font-size: 14px;
+}
+
+/*
+.acciones-medicos{
+    width: 25px;
+    text-align: center;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+}*/
+
+.acciones-medicos {
+    width: 38px;
+    text-align: center;
+    height: 35px;
+    font-size: 16px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.contiene-acciones-med{
+    float: right;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.card-header h5.mb-0 button.btn-link {
+    width: 65%;
+    text-align: left;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    overflow: hidden;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.modal-header h5 {
+    font-size: 14px;
+}
+
+/**//**/
+.datepickerdemoBasicUsage {
+    /** Demo styles for mdCalendar. */ }
+    .datepickerdemoBasicUsage md-content {
+      padding-bottom: 200px; }
+  
+
+    /*DATE PICKER*/
+
+    .gj-datepicker{
+        width: 50%;
+        float: left;
+    }
+
+    .tab-contents {
+        padding: .5em;
+    }
+
+
+    /**/
+
+    .planificacion-statmd{
+        text-align: center;
+    font-size: 14px;
+    }
+
+    .planificacion-statmd td{
+        vertical-align: middle !important;
+    }
+
+    .planificacion-statmd tr th {
+        vertical-align: middle !important;
+        text-shadow: none;
+        padding: 0;
+    }
+
+    .planificacion-statmd td:last-child{
+        padding: 0;
+        text-align: center;
+        vertical-align: middle !important;
+    }
+
+    .tablastock{
+        text-align: center;
+        font-size: 13px;
+    }
+
+
+    #exampleModal1{
+    background-color: #00000063;
+    }
+
+    .boton-paseplanificar{
+        margin-left: 25px;
+        background-color: #28a745;
+        color: white;
+        font-size: 17px;
+    }
+
+    /*POPOVER DE MEDIKCOS*/
+
+    .relativo-c1{
+     position: relative;   
+    }
+
+    .relativo-c2{
+        position: relative;   
+       }
+
+    .infomed{
+        position: absolute;
+        top: 5px;
+        color: #7c00ff;
+        cursor: pointer;
+        right: 0;
+    }
+
+    .adm{
+        width: 15px;
+        height: 19px;
+        padding: 0;
+        margin-right: 5px;
+        background-color: white;
+        float: left;
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+
+    /*indicadores*/
+    .indicadores-pordia {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        float: left;
+        width: 210px;
+        margin-top: -2px;
+        margin-left: 0;
+        padding: 4px;
+        border: 1px solid #d8d7d7;
+        border-radius: 7px;
+    }
+
+    .indicadores-pordia h5 {
+        margin-bottom: 2px;
+        font-size: 12px;
+    }
+
+    .indicadores-pordia span {
+        width: 22px;
+        height: 21px;
+        border-radius: 100%;
+        color: white;
+        /* padding: 0px 5px; */
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .indicador-r{
+        /*background-color: #28a745;*/
+    }
+
+    .indicador-sr{
+        /*background-color: red;*/
+    }
+
+    .indicador-a{
+        background-color: #ffc107;
+    }
+
+    /*icono flotante inferior derecho*/
+
+    #alerta-indicadores-ciclo {
+        position: fixed;
+        bottom: 22px;
+        right: 18px;
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #alerta-indicadores-ciclo:hover{
+        transform: scale(1.1)
+    }
+
+    #alerta-indicadores-ciclo img{
+        width: 100%;
+    }
+
+    #clonar-planificacion{
+        float: right;
+        margin-left: 12%;
+        font-size: 13px;
+    }
+
+    .fecha-u-aviso{
+        font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+
+    /**/
+    #exampleModalconfirma{
+        z-index: 2000;
+        background-color: #0000009e;
+        padding-top: 10% !important;
+    padding-right: 16px !important;
+    }
+
+
+    .alert-inst {
+        width: 28px;
+        height: 29px;
+        background-color: #dc3545;
+        color: white;
+        padding: 3px 10px 4px;
+        border-radius: 100%;
+        cursor: pointer;
+        float: right;
+    }
+    
+
+    /**/
+
+    @media (max-width: 1024px){
+        #main-wrapper {
+            margin-top: 0;
+        }
+
+        .panel-filtros-c {
+            height: 230px;
+            position: fixed;
+            top: 100px;
+            right: -208px;
+            z-index: 100;
+            background-color: white;
+            /* border: 1px solid; */
+            width: 205px;
+            transition: all ease 250ms;
+            -webkit-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+        }
+
+        div.calendar-events.ui-draggable {
+            display: none;
+        }
+
+        .panel-filtros-c hr{
+            display: none;
+        }
+
+        .panel-filtros-c .card-title {
+            font-size: 14px;
+        }
+
+        #calendar-events{
+            max-width: 135px;
+        }
+
+        #calendar-events input{
+            font-size: 12px;
+        }
+
+        .medicos-busqueda{
+            max-width: 135px;
+        }
+
+        .medicos-busqueda input{
+            font-size: 12px;
+        }
+
+        #filtros-busqueda-movil{
+            display: block !important;
+            position: absolute;
+            left: -47px;
+            top: 0;
+            padding: 5px 10px;
+            font-size: 27px;
+            -webkit-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 0px 5px -1px rgba(0,0,0,0.75);
+            box-shadow: -2px 0px 3px -1px rgba(0,0,0,0.75);
+            background-color: #dc3545;
+            color: white;
+            text-shadow: none;
+        }
+
+        .bajado{
+            display: block !important;
+        }
+
+        .unstyled.centered{
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        
+        .tablastock input[name="quant[1]"]{
+            padding: 0px;
+            width: 25px;
+            text-align: center;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        th[scope="col"]:first-child {
+            min-width: 170px;
+        }
+
+        th[scope="col"]:nth-child(3) {
+            min-width: 100px;
+        }
+    }
+
+
+    #filtros-busqueda-movil {
+        display: none;
+    }
+
+
+    .movimiento-traslativo{
+        right: 0;
+    }
+
+    .bajado{
+        display: none;
+    }
+
+    body{
+        background-color: #27343E;
+    }
+
+    /*.popover-header{
+        background-color: #dc3545;
+        color: white;
+    }*/
+
+    .fc-day-grid-event.bg-info{
+        background-color: #4CAF4E !important;
+    }
+
+    .fc-day-grid-event.bg-success{
+        background-color: #F44336 !important;
+    }
+
+    .fc-day-grid-event.bg-success:hover{
+        background-color: #117a8b !important;
+    }
+
+    .fc-day-grid-event.bg-info:hover{
+        background-color: #117a8b !important;
+    }
+
+    .indicadores-pordia.segundo span{
+        background-color: #007bff;
+        cursor: pointer;
+    }
+
+    .indicadores-pordia.segundo {
+        max-width: 164px;
+        margin-left: 18px;
+    }
+
+
+
+    @media(max-width: 450px){
+        .indicadores-pordia.segundo {
+            max-width: 164px;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+
+    .fc th.fc-widget-header{
+        background-color: #dae9f7;
+    }
+
+    #calendar .fc-state-active, #calendar .fc-state-down {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: #fff;
+    }
+
+    
+
+    .tablastock .input-group-btn{
+        width: 22px;
+        height: 22px;
+    }
+
+    .tablastock .input-group-btn button{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+
+
+    .contiene-visita-u{
+       /* max-height: 220px;*/
+    overflow: auto;
+    }
+
+    .contiene-visita-u h5{
+        font-size: 14px;
+    }
+
+    .contiene-visita-u p{
+        font-size: 14px;
+    }
+
+    .filtros-avanzados-medicos {
+        position: absolute;
+        z-index: 1000;
+        /* left: 56%; */
+        /* margin-top: 37px; */
+        padding: 2px 6px;
+        color: #565656;
+        font-size: 13px;
+        top: 36px;
+        right: 10px;
+    }
+
+    .sapUiBodyBackground, .sapUiBody {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .sapUiTableHdr{
+        display: none;
+    }
+
+    .tablastock input[name="quant[1]"]{
+        padding: 0px;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .sapUiUx3FFLstHeadTxt {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 !important;
+        padding: 13px;
+        background-color: #cbcdf7;
+    }
+
+
+    .calendario-dinam {
+        min-width: 200px;
+        height: 42px;
+        display: inline-flex;
+        margin-bottom: 10px;
+        width: 100%;
+        margin: auto;
+        margin-right: 30px;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .calendario-dinam input {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        min-width: 110px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .calendario-dinam span {
+        border: 0;
+        padding: 6px 12px;
+        color: #666666;
+        background-color: #dddddd;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    #Turno{
+        display: inline-flex;
+        vertical-align: middle;
+        text-align: center;
+        margin: auto;
+        float: left;
+        min-width: 170px;
+        margin-bottom: 25px;
+        margin-top: 3px;
+    }
+
+    #datetimepicker1 * {
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+    hr{
+        border-top: 2px dashed #bfbfbf;
+        /*border-color: #e52929;*/
+    }
+
+    #accordion .card {
+        margin-bottom: 7px;
+    }
+
+    #accordion .collapse.show {
+        border: 2px solid #343a40;
+    }
+
+    .conteo-pacientes{
+        display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    }
+
+/*PICKERS*/
+
+    .datepicker table tr td.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:hover, .datepicker table tr td.selected, .datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected:hover, .datepicker table tr td.today, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover, .datepicker table tr td.today:hover {
+        background-color: transparent !important;
+    }
+
+    .gj-picker-bootstrap table tr td.selected.gj-cursor-pointer div {
+        background-color: #e52929 !important;
+        border-color: #e52929 !important;
+    }
+
+    .datepicker table tr td.today {
+        border: 1px solid #e52929;
+        border-radius: 100%;
+        display: table-caption;
+    }
+
+    .datepicker table tr td.today.selected{
+        border: 0;
+    }
+
+    .gj-picker-bootstrap [role="body"] [role="arrow"] {
+        background-color: #e52929 !important;
+    }
+
+    .gj-picker-bootstrap .arrow-begin {
+        background-color: #e52929 !important;
+    }
+
+    .gj-picker-bootstrap .arrow-end {
+        border: 16px solid #e52929 !important;
+    }
+
+    .gj-picker-bootstrap [role="header"] {
+        background: #dc3545 !important;
+        color: #fff !important;
+    }
+
+    .gj-picker-bootstrap .selected {
+        color: #fff !important;
+    }
+
+    .gj-picker .modal-footer button:last-child {
+        background: #dc3545 !important;
+        box-shadow: none;
+        color: white;
+        margin-top: 3px;
+    }
+
+    .datos-picker{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .datos-picker .gj-datepicker{
+        width: 150px;
+    height: 35px;
+    }
+
+    .datos-picker .gj-datepicker input{
+        max-width: 100px;
+        font-size: 13px;
+        padding: 0;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .datos-picker .gj-datepicker span button{
+        padding: 0px;
+        text-align: center;
+        /* padding-left: 2px; */
+        box-shadow: none;
+        color: #212529 !important;
+        background-color: #dee2e6!important;
+        border-color: #dee2e6!important;
+    }
+
+    .datos-picker .gj-datepicker span button i{
+        font-size: 17px;
+    }
+
+
+
+    .datos-picker .gj-timepicker{
+        width: 150px;
+    height: 35px;
+    }
+
+    .datos-picker .gj-timepicker input{
+        max-width: 100px;
+        font-size: 13px;
+        padding: 0;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .datos-picker .gj-timepicker span button {
+        padding: 0px;
+        text-align: center;
+        /* padding-left: 2px; */
+        box-shadow: none;
+        color: #212529 !important;
+        background-color: #dee2e6!important;
+        border-color: #dee2e6!important;
+    }
+
+    .datos-picker .gj-timepicker span button i{
+        font-size: 17px;
+    }
+
+
+    #exampleModalconfirma .datos-picker{
+        display: inline-flex;
+    }
+
+    .mb-0 .contiene-acciones-med button{
+        width: 25px;
+        height: 25px;
+    }
+
+    .planificacion-statmd tbody tr th {
+        padding: 0;
+        font-weight: 500;
+        text-shadow: none;
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+
+    .btn-link[data-dismiss="modal"] {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .form-check-inline .form-check-input {
+        box-shadow: none;
+    }
+
+    input[type=checkbox]{
+        box-shadow: none;
+    }
+
+    #exampleModalLongRegistro .form-check-label {
+        font-weight: 400;
+        text-shadow: none;
+    }
+
+    @media(max-width: 380px){
+        .contiene-acciones-med {
+            position: absolute;
+            right: -9px;
+            z-index: 100;
+            top: -37px;
+            background-color: white;
+            border: 1px solid #e3e3e3;
+            padding: 2px 3px;
+        }
+
+        #accordion .card {
+            margin-top: 42px;
+        }
+    }
+
+    .card.infoderegistrovisita * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card.infoderegistrovisita {
+        padding: 10px;
+    }
+
+    .card.infoderegistrovisita .card-title{
+        margin-bottom: 15px;
+    }
+
+    .card.infoderegistrovisita .tt {
+        display: inline-flex;
+        font-size: 15px;
+    }
+
+    .card.infoderegistrovisita .rr {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .sapUiUx3FFLstHeadTxt {
+        background-color: #dc3545;
+        text-shadow: none;
+        color: white !important;
+        font-size: 14px !important;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .sapUiTableCol {
+        background-color: #dc35451c !important;
+    }
+
+    .infoderegistrovisita h5{
+        color: #e52929;
+    }
+
+    .thora-registrada{
+        color: #e52929;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    margin-right: 10px;
+    }
+
+    .thora-registrada:hover{
+        text-decoration: none;
+    }
+
+
+    .confirmasobrereporte {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+    .mb-0 button {
+        text-decoration: none !important;
+    }
+
+    .puzz {
+        background-color: #b400ff;
+        color: white;
+    }
+
+    .puzz i{
+        font-size: 12px;
+    }
+
+    .eliminareporte {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+
+
+
+    /**/
+    .card .card-body .message {
+        padding-left: 80px;
+      }
+      .card .card-body .message::after {
+        clear: both;
+      }
+      
+      .card .card-body .actions {
+        margin-top: 5px;
+        text-align: right;
+      }
+      
+
+      #exampleModal1 .card{
+          border: 0px;
+      }
+
+      #exampleModal1 .modal-header{
+        padding: 12px;
+      }
+
+      #exampleModal1 .card-body{
+        padding: 10px 22px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      #exampleModal1 .modal-footer{
+        padding: 0;
+        padding-right: 32px;
+        padding-bottom: 10px;
+      }
+
+
+       
+	/* Custom checkbox */
+	.custom-checkbox {
+		position: relative;
+	}
+	.custom-checkbox input[type="checkbox"] {    
+		opacity: 0;
+		position: absolute;
+		margin: 5px 0 0 3px;
+		z-index: 9;
+	}
+	.custom-checkbox label:before{
+		width: 18px;
+		height: 18px;
+	}
+	.custom-checkbox label:before {
+            margin-top: 8px;
+            margin-left: 10px;
+		content: '';
+		display: inline-block;
+		vertical-align: text-top;
+		background: white;
+		border: 1px solid #bbb;
+		border-radius: 2px;
+		box-sizing: border-box;
+		z-index: 2;
+	}
+	.custom-checkbox input[type="checkbox"]:checked + label:after {
+        margin-top: 8px;
+        margin-left: 10px;
+		content: '';
+		position: absolute;
+		left: 6px;
+		top: 3px;
+		width: 6px;
+		height: 11px;
+		border: solid #000;
+		border-width: 0 3px 3px 0;
+		transform: inherit;
+		z-index: 3;
+		transform: rotateZ(45deg);
+	}
+	.custom-checkbox input[type="checkbox"]:checked + label:before {
+		border-color: #03A9F4;
+		background: #03A9F4;
+    }
+    
+	.custom-checkbox input[type="checkbox"]:checked + label:after {
+		border-color: #fff;
+    }
+    
+	.custom-checkbox input[type="checkbox"]:disabled + label:before {
+		color: #b8b8b8;
+		cursor: auto;
+		box-shadow: none;
+		background: #ddd;
+    }
+    
+    .copyclonamed {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+    }
+
+    .copyclonamed:hover {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+        border: 0;
+    }
+
+    .copyclonamed:focus {
+        background-color: #e5e5e5;
+        color: #3a3a3a;
+        border: 0;
+    }
+
+    #exampleModalconfirmamed{
+        background-color: #00000085;
+    }
+
+
+    .historico{
+        float: left;
+        border: 0;
+        background-color: #af25af;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+/*
+    #clonar-planificacion:after{
+        content: 'Para clonar de forma múltiple se necesita mínimo seleccionar una Visita.';
+
+    }*/
+
+
+    /*TABLA DE HISTORICO*/
+
+    .tablahistorico .panel {
+        border: 1px solid #ddd;
+        background-color: #fcfcfc;
+    }
+    .tablahistorico .panel .btn-group {
+        margin: 15px 0 30px;
+    }
+    .tablahistorico .panel .btn-group .btn {
+        transition: background-color .3s ease;
+    }
+     .table-filter {
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+     .table-filter tbody tr:hover {
+        cursor: pointer;
+        background-color: #eee;
+    }
+     .table-filter tbody tr td {
+        padding: 10px;
+        vertical-align: middle;
+        border-top-color: #eee;
+    }
+     .table-filter tbody tr.selected td {
+        background-color: #eee;
+    }
+     .table-filter tr td:first-child {
+        width: 38px;
+    }
+     .table-filter tr td:nth-child(2) {
+        width: 35px;
+    }
+     .ckbox {
+        position: relative;
+    }
+     .ckbox input[type="checkbox"] {
+        opacity: 0;
+    }
+     .ckbox label {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+     .ckbox label:before {
+        content: '';
+        top: 1px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: absolute;
+        border-radius: 2px;
+        border: 1px solid #bbb;
+        background-color: #fff;
+    }
+     .ckbox input[type="checkbox"]:checked + label:before {
+        border-color: #2BBCDE;
+        background-color: #2BBCDE;
+    }
+     .ckbox input[type="checkbox"]:checked + label:after {
+        top: 3px;
+        left: 3.5px;
+        content: '\e013';
+        color: #fff;
+        font-size: 11px;
+        font-family: 'Glyphicons Halflings';
+        position: absolute;
+    }
+     .table-filter .star {
+        color: #ccc;
+        text-align: center;
+        display: block;
+    }
+     .table-filter .star.star-checked {
+        color: #F0AD4E;
+    }
+     .table-filter .star:hover {
+        color: #ccc;
+    }
+     .table-filter .star.star-checked:hover {
+        color: #F0AD4E;
+    }
+     .table-filter .media-photo {
+        width: 35px;
+    }
+     .table-filter .media-body {
+        display: block;
+        /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
+    }
+     .table-filter .media-meta {
+        font-size: 11px;
+        color: #999;
+    }
+     .table-filter .media .title {
+        color: #2BBCDE;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: normal;
+        margin: 0;
+    }
+     .table-filter .media .title span {
+        font-size: .8em;
+        margin-right: 20px;
+    }
+     .table-filter .media .title span.pagado {
+        color: #5cb85c;
+    }
+     .table-filter .media .title span.pendiente {
+        color: #f0ad4e;
+    }
+     .table-filter .media .title span.cancelado {
+        color: #d9534f;
+    }
+     .table-filter .media .summary {
+        font-size: 14px;
+    }
+
+
+
+    @media(max-width: 990px){
+    .busqueda-inst-med{
+        width: 75%;
+        display: none;
+    }
+}
+
+.fecha-histo{
+    width: 80px;
+}
+
+.fecha-histo .ckbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 4px solid;
+    padding-right: 8px;
+}
+
+.span1-histo{
+    font-size: 11px;
+    text-align: right;
+}
+
+.span2-histo{
+    font-size: 30px;
+    margin-top: -11px;
+}
+
+.media * {
+    display: inline-flex;
+    height: 100%;
+    margin: auto;
+}
+
+.porinstitu2 tr[data-status="pagado"] .media a{
+    border: 5px solid #28a745;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu2 tr[data-status="cancelado"] .media a{
+    border: 5px solid #dc3545;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu tr[data-status="pagado"] .media a{
+    border: 5px solid #28a745;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.porinstitu tr[data-status="cancelado"] .media a{
+    border: 5px solid #ff9c07;
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.cambiocolor-activo{
+    background-color: #e52929 !important;
+    border-color: #e52929 !important;
+}
+
+.tablahistorico div.col-6{
+    display: inline-block;
+    float: left;
+}
+
+tr[data-status="pagado"] .star{
+    display: none !important;
+}
+
+.summary{
+    font-size: 13px !important;
+}
+
+.summary2{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+@media(max-width: 990px){
+    .porinstitu2{
+        max-width: 100%;
+    }
+
+    .porinstitu{
+        max-width: 100%;
+    }
+}
+
+.marcadoproceso {
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.marcadoproceso .horademarcado {
+    box-sizing: border-box;
+    border: 1px solid #ffc107;
+    padding: 0 4px;
+    border-radius: 6px;
+    color: #ffc107;
+}
+
+.marcadoproceso .nombremed-marcado{
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+.marcadoproceso .realizadovisita-marcado{
+    color: green;
+}
+
+.tooltip .tooltip-inner{
+    max-width: inherit !important;
+    text-align: left !important;
+}
+
+.marcadoproceso .realizadovisita-nomarcado{
+    color: #ffc107;
+}
