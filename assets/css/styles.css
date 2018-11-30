@@ -1071,15 +1071,16 @@ h5.mb-0 button {
     }
 
 
-    .historico{
-        float: left;
-        border: 0;
-        background-color: #af25af;
-        font-size: 18px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+    .historico {
+    float: left;
+    border: 0;
+    background-color: #af25af;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+}
 
 /*
     #clonar-planificacion:after{
