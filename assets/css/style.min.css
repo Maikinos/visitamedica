@@ -35734,3 +35734,7 @@ html body .navbar-dark .mailbox .message-center a .mail-contnet .time {
         box-shadow: 0px 2px 1px -1px rgba(202, 202, 202, 0.75);
         padding: 10px;
     }
+
+#main-wrapper .left-sidebar{
+display:none;
+}
