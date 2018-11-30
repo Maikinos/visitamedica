@@ -35738,3 +35738,7 @@ html body .navbar-dark .mailbox .message-center a .mail-contnet .time {
 #main-wrapper aside.left-sidebar{
 display:none !important;
 }
+
+.calendar-events.ui-draggable {
+    margin-bottom: 10px;
+}
