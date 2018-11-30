@@ -35735,6 +35735,6 @@ html body .navbar-dark .mailbox .message-center a .mail-contnet .time {
         padding: 10px;
     }
 
-#main-wrapper .left-sidebar{
-display:none;
+#main-wrapper aside.left-sidebar{
+display:none !important;
 }
